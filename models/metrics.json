@@ -1,0 +1,5 @@
+{
+  "baseline_accuracy": 0.22,
+  "synthetic_test_accuracy": 1.0,
+  "handwritten_test_accuracy": 0.833
+}

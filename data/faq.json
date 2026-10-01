@@ -1,0 +1,22 @@
+{
+  "shipping": {
+    "it": "Controlla il tracking nella pagina dell'ordine. Se è fermo da più di 7 giorni, contatta il corriere e apri una segnalazione sul pacco.",
+    "en": "Check the tracking on the order page. If it has not moved for more than 7 days, contact the courier and open a parcel report."
+  },
+  "refund": {
+    "it": "I rimborsi vengono elaborati dopo la conferma di ricezione del reso. Verifica lo stato nella pagina dell'ordine; se sono passati più di 10 giorni, apri una richiesta.",
+    "en": "Refunds are processed once the return is confirmed as received. Check the status on the order page; if more than 10 days have passed, open a request."
+  },
+  "not_as_described": {
+    "it": "Se l'articolo non corrisponde all'annuncio, invia foto del difetto entro 2 giorni dalla consegna e apri una richiesta di reso.",
+    "en": "If the item does not match the listing, send photos of the defect within 2 days of delivery and open a return request."
+  },
+  "account": {
+    "it": "Prova il recupero password dalla schermata di accesso. Se l'account risulta bloccato, ti serve la verifica dell'identità: apri una richiesta indicando l'email del profilo.",
+    "en": "Try the password recovery on the login screen. If the account is blocked, identity verification is needed: open a request with your profile email."
+  },
+  "payment": {
+    "it": "I pagamenti di vendita vengono accreditati dopo la conferma di consegna. Controlla il saldo e i metodi di pagamento; se non risulta nulla dopo 7 giorni, apri una richiesta.",
+    "en": "Sale payments are credited after delivery is confirmed. Check your balance and payment methods; if nothing shows up after 7 days, open a request."
+  }
+}

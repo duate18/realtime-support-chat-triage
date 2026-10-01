@@ -1,0 +1,911 @@
+id,language,category,text
+1,en,shipping,"Hello, The tracking for order #56476 has been stuck for 19 days. Waiting for your reply."
+2,it,account,"salve, vorrei cambiare l'email del mio profilo. potete aiutarmi?"
+3,it,payment,"Ciao, Ho venduto la borsa ma il pagamento non è ancora arrivato sul mio saldo. Grazie."
+4,en,payment,"Good morning, I can't add my card to pay. Waiting for your reply."
+5,it,not_as_described,"Ciao, Il venditore ha descritto l'articolo (il maglione) come nuovo ma è usato e consumato. Potete aiutarmi?"
+6,it,refund,"Buongiorno, Ho restituito le scarpe 5 giorni fa e non ho ancora ricevuto il rimborso. Grazie."
+7,it,not_as_described,"Salve, L'ordine #21539 non corrisponde alla descrizione: il colore è completamente diverso."
+8,it,shipping,"buongiorno, ordine #43386: la spedizione è in ritardo, mi sapete dire dov'è?"
+9,en,payment,"good morning, i can't add my card to pay. thanks."
+10,it,refund,"Salve, Mi hanno addebitato due volte l'ordine #56160, chiedo il rimborso. Potete aiutarmi?"
+11,it,account,Non mi arriva il codice di verifica per entrare. Potete aiutarmi?
+12,it,not_as_described,L'articolo ricevuto (la borsa) è diverso dalle foto dell'annuncio. Attendo una risposta.
+13,en,refund,"Hello, I want a refund for order #94930. Can you help me?"
+14,en,refund,"Good morning, I want a refund for order #48219. Can you help me?"
+15,en,not_as_described,"Hi, The seller described the item (the bag) as new but it is used and worn. Can you help me?"
+16,it,shipping,Il pacco con la borsa non è arrivato dopo 13 giorni.
+17,it,payment,"Ciao, Il trasferimento del mio saldo è fermo da 3 giorni. Attendo una risposta."
+18,en,refund,"Hello, I returned the jeans 13 days ago and I still haven't received my refund. Waiting for your reply."
+19,en,payment,"Hi, I sold the bag but the payment has not reached my balance yet. Thanks."
+20,it,account,"Buongiorno, Vorrei cambiare l'email del mio profilo."
+21,it,payment,Il pagament odell'ordine #83377 è stato rifiutato.
+22,en,shipping,"hi, the tracking for order #35166 has been stuck for 18 days. can you help me?"
+23,en,payment,"hello, the money from my sale (the shoes) has not been credited after 14 days. thanks."
+24,en,shipping,My parcel with the bag has not arrived after 13 days. Waiting for your reply.
+25,it,shipping,"Ciao, Il pacco con il maglione non è arrivato dopo 20 giorni. Grazie."
+26,en,shipping,The tracking for order #71462 has been stuck for 5 days. Waiting for your reply.
+27,en,shipping,"Hello, The tracking for order #92242 has been sutck for 6 days. Waiting for your reply."
+28,en,not_as_described,"hi, the item i received (the bag) is different from the photos in the listing. thanks."
+29,en,account,"Hi, I woudl like to change the email on my profile. Thanks."
+30,it,shipping,"salve, ordine #25860: la spedizione è in ritardo, mi sapete dire dov'è?p otete aiutarmi?"
+31,en,payment,"Helol, The payment for order #74067 was declined. Thanks."
+32,en,account,i forgot my password and the recovery email never arrives. thanks.
+33,en,not_as_described,"Good morning, The listing showed no stains but the item (the jeans) is damaged. Waiting for your reply."
+34,it,refund,"Salve, Voglio un rimborso per l'odrine #92667. Grazie."
+35,it,shipping,"Ciao, Il corriere dice che ha consegnato ma io non ho ricevuto niente."
+36,en,not_as_described,"hi, i bought the bag in size m but a different size arrived. can you help me?"
+37,it,shipping,Il tracking dell'ordine #63271 è fermo da 10 giorni. Potete aiutarmi?
+38,en,account,"Godo morning, My account was blocked without any explanation. Can you help me?"
+39,en,refund,my refund for the sweater has been pending for 5 days. waiting for your reply.
+40,en,payment,"good morning, the payment for order #78219 was declined. can you help me?"
+41,en,account,"Hello, I can't log in to my account, my password doesn't work. Waiting for your reply."
+42,en,not_as_described,The item I received (the shoes) is different from the photos in the listing.
+43,it,refund,"Salve, Come posso annullare l'ordine #47880 e riavere i miei soldi?"
+44,it,not_as_described,"ciao, l'articolo ricevuto (i jeans) è diverso dalle foto dell'annuncio."
+45,it,refund,Come posso annullare l'ordine #85166 e riavere i miei soldi?
+46,it,shipping,"Ciao, Il pacco con le scarpe non è arrivato dopo 20 giorni. Grazie."
+47,en,refund,"Hello, My refund for the jeans has been pedning for 16 days. Thanks."
+48,en,not_as_described,"Good morning, Order #19514 does not match the description: the colour is completely different. Thanks."
+49,it,payment,"ciao, non riesco ad aggiungere la carta per pagare."
+50,en,shipping,"Order #21836: the shipment is late, can you tellm e where it is? Thanks."
+51,it,shipping,"Buongiorno, Il tracking dell'ordine #23446 è fermo da 18 giorni. Attendo una risposta."
+52,it,payment,"Buongiorno, I soldi della vendita (la borsa) non risultano accreditati dopo 20 giorni. Grazie."
+53,en,shipping,"Hi, The courier says it was delivered but I received nothing. Thanks."
+54,it,shipping,"Buongiorno, Il pacco con il maglioen non è arrivato dopo 16 giorni. Grazie."
+55,it,shipping,Il pacco con i jeans non è arrivato dopo 9 giorni. Potete aiutarmi?
+56,en,not_as_described,"Good morning, Order #33969 does not match the description: the colour is completely different."
+57,it,account,"Salve, Non riesco ad accedere al mio account, la password non funziona. Potete aiutarmi?"
+58,it,payment,il pagamento dell'ordine #82851 è stato rifiutato. potete aiutarmi?
+59,en,refund,"Good morning, I want a refund for order #55656. Waiting for your reply."
+60,it,shipping,"Salve, Ordine #41029: la spedizione è in riatrdo, mi sapete dire dov'è? Potete aiutarmi?"
+61,it,shipping,"Ciao, Sono passati 10 giorni e il pacco con il maglione non si vede. Grazie."
+62,en,account,"good morning, my account was blocked without any explanation."
+63,it,refund,"Mi hanno addebitato due volte l'ordine #49306, chiedo il rimborso. Potete aiutarmi?"
+64,it,refund,"Salve, Come posso annulalre l'ordine #28777 e riavere i miei soldi?"
+65,en,not_as_described,"Good morning, Order #73782 does not match the description: the colour is completely different. Waiting for your reply."
+66,it,refund,"ciao, mi hanno addebitato due volte l'ordine #80592, chiedo il rimborso. attendo una risposta."
+67,en,refund,"Good morning, I want a refund for order #39427. Can you help me?"
+68,en,not_as_described,"Hello, The listing showed no stains but the item (the jacket) is damaged. Can you help me?"
+69,en,refund,"Hi, My refund for the sweater has been pending for 8 days."
+70,en,not_as_described,Order #78425 does not match the description: the colour is completely different. Waiting for your reply.
+71,en,shipping,the courier says it was delivered but i received nothing.
+72,en,account,I would like to change the email on my profile. Waiting for your reply.
+73,en,refund,"Hi, My refund for the dress has been pending for 14 days."
+74,en,not_as_described,"Good mornin,g The listing showed no stains but the item (the bag) is damaged. Can you help me?"
+75,en,not_as_described,"Hello, The listing showed no stains but the item (the bag) is damaged. Thanks."
+76,en,refund,I returned the shoes 20 days ago and I still haven't received my refund. Can you help me?
+77,it,account,"non riesco ad accedere al mio account, la password non funziona. attendo una risposta."
+78,it,payment,"buongiorno, ho venduto il vestito ma il pagamento non è ancora arrivato sul mio saldo. grazie."
+79,en,shipping,It has been 18 days and my parcel with the dress is nowhere to be seen. Waiting for your reply.
+80,it,payment,"Buongiorno, Il trasferimento del mio saldo è fermo da 10 giorni. Attendo una risposta."
+81,it,account,Il mio account è stato bloccato senza spiegazioni. Attendo una risposta.
+82,en,payment,"Hello, I can't add my card to pay. Thanks."
+83,en,not_as_described,"Good morning, Order #61248 does not match the description: the colour is completely different. Can you help me?"
+84,it,not_as_described,"Ciao, L'ordine #44768 non corrisponde alla descrizione: il colore è compleatmente diverso. Attendo una risposta."
+85,en,shipping,"order #96200: the shipment is late, can you tell me where it is?"
+86,it,account,"Non riesco ad accedere al mio account, la password non funziona. Grazie."
+87,en,not_as_described,"Hi, The item I received (the jacket) is different from the photos in the listing. Can you help me?"
+88,it,shipping,"Salve, Il pacco con il vestito non è arrivato dopo 16 giorni."
+89,it,refund,Il rimborso per il maglione è ancora in attesa da 16 giorni. Attendo una risposta.
+90,en,shipping,it has been 3 days and my parcel with the dress is nowhere to be seen. can you help me?
+91,en,not_as_described,"Hi, Order #28350 does not match the description: the colour is completely different. Waiting for your reply."
+92,en,account,"Hi, I am not receiving the verification code to log in. Waiting for your reply."
+93,en,payment,"Hi, The payment for order #67117 was declined. Waiting for your reply."
+94,en,shipping,"Hi, The tracking for order #46342 has been stuck for 3 days. Can you help me?"
+95,it,payment,"Buongiorno, Il trasferimento del mio saldo è fermo da 6 giorni."
+96,en,shipping,"good morning, my parcel with the shoes has not arrived after 6 days. can you help me?"
+97,it,shipping,"salve, ordine #44675: la spedizione è in ritardo, mi sapete dire dov'è?"
+98,en,not_as_described,Order #68034 does not match the description: the colour is completely different.
+99,it,shipping,"buongiorno, il tracking dell'ordine #51904 è fermo da 13 giorni. potete aiutarmi?"
+100,en,not_as_described,"Hi, I bought the sweater in size M but a different size arrived."
+101,it,not_as_described,il venditore ha descritto l'articolo (i jeans) come nuovo ma è usato e consumato. grazie.
+102,en,refund,"i was charged twice for order #30707, i am asking for a refund."
+103,it,refund,"Buongiorno, Il rimborso per la giacca è ancora in attesa da 7 giorni."
+104,en,shipping,"Hi, Order #32280: the shipment is late, can you tell me where it is? Thanks."
+105,en,payment,"Hello, The transfer of my balance has been stuck for 19 days. aWiting for your reply."
+106,en,not_as_described,I bought the sweater in size M but a different size arrived. Waiting for your reply.
+107,en,shipping,"Good morning, My parcel with hte dress has not arrived after 4 days. Can you help me?"
+108,en,refund,"Hi, How can I cancel order #85481 and get my money back? Waiting for your reply."
+109,it,shipping,"Buongiorno, Sono passati 13 giorni e il pacco con la giacca non si vede. Grazie."
+110,it,payment,I soldi della vendita (il maglione) non risultano accreditati dopo 3 giorni. Potete aiutarmi?
+111,it,shipping,"Salve, Il pacco con le scarpe non è arrivato dopo 9 giorni. Grazie."
+112,it,not_as_described,"Ciao, L'articolo ricevuto (il maglione) è diverso dalle foto dell'annuncio."
+113,it,shipping,"Ciao, Il tracking dell'ordine #59689 è fermo da 11 giorni. Potete aiutarmi?"
+114,en,not_as_described,"Hello, The seller described the item (the jeans) as new but it is used and worn."
+115,it,account,"Salve, Vorrei cambiare l'email del mio profilo. Potete aiutarmi?"
+116,en,shipping,"Hello, It has been 7 days and my parcel with the dress is nowhere to be seen."
+117,en,refund,"Good morning ,I was charged twice for order #85684, I am asking for a refund."
+118,en,refund,"Good morning, I was charged twice for order #45197, I am asking for a refund. Waiting for your reply."
+119,it,refund,"Ciao, Mi hanno addebitato due volte l'ordine #16145, chiedo il rimborso."
+120,it,payment,"Salve, I soldi della vendita (la giacca) non risultano accreditati dopo 18 giorni. Attendo una risposta."
+121,en,not_as_described,"Good morning, Order #48568 does not match the description: the colour is completely different. Thanks."
+122,en,payment,"Hello, I sold the jeans but the payment has not reached my balance yet."
+123,en,payment,The transfer of my balance has been stuck for 19 days. Thanks.
+124,en,payment,"Hi, The money from my sale (the sweater) has not been credited after 7 days. Thanks."
+125,en,not_as_described,"hello, the item i received (the bag) is different from the photos in the listing."
+126,it,shipping,"ordine #11220: la spedizione è in ritardo, mi sapete dire dov'è? grazie."
+127,en,refund,"Good morning, I want a refund for order #58177. Can you help me?"
+128,it,not_as_described,"Ciao, Nell'annuncio non c'erano macchie ma l'articolo (le scarpe)  èrovinato."
+129,en,not_as_described,"hi, the listing showed no stains but the item (the jeans) is damaged."
+130,it,shipping,"ciao, il pacco con i jeans non è arrivato dopo 20 giorni. grazie."
+131,en,not_as_described,I bought the jacket in size M but a different size arrived. Waiting for your reply.
+132,en,refund,"Good morning, How can I cancel order #73527 and get my money back? Waiting for your reply."
+133,it,not_as_described,"Ciao, L'ordine #97797 non corrisponde alla descrizione: il colore è completamente diverso. Grazie."
+134,it,not_as_described,"Buongiorno, L'articolo ricevuto (le scarpe) è diverso dalle foto dell'annuncio. Grazie."
+135,en,account,I would like to change the email on my profile.
+136,en,refund,"I was charged twice for order #31916, I am asking for a refund. Waiting for your reply."
+137,it,shipping,"Buongiorno, Sono passati 3 giorni e il pacco con i jeans nons i vede. Grazie."
+138,en,account,"Good morning, I can't log in to my account, my password doesn't work. Can you help me?"
+139,en,refund,"Hi, My refund for the bag has been pending for 12 days."
+140,it,shipping,"Salve, Il tracking dell'ordine #30585 è fermo da 5 giorni. Potete aiutarmi?"
+141,it,refund,"Ciao, Come posso annullare l'ordine #61897 e riavere i miei soldi? Grazie."
+142,it,refund,"Ciao, Mi hanno addebitato due volte l'ordine #47649, chiedo il rimborso. Attendo una risposta."
+143,it,not_as_described,"Salve, L'ordine #35265 non corrisponde alla descrizione: il colore è completamente diverso. Grazie."
+144,it,not_as_described,"Salve, L'ordine #76628 non corrisponde alla descriizone: il colore è completamente diverso. Potete aiutarmi?"
+145,it,account,"Buongiorno, Non mi arriva il codice di verifica per entrare."
+146,it,not_as_described,"Ciao, Nell'annuncio non c'erano macchie ma l'articolo (il maglione) è rovinato. Attendo una risposta."
+147,en,refund,"Hi, How can I cancel order #90918 and get my money back? Waiting for your reply."
+148,en,not_as_described,"hello, the seller described teh item (the sweater) as new but it is used and worn."
+149,it,payment,"Buongiorno, Il trasferimento del mio saldo è fermo da1 9 giorni."
+150,en,refund,"hi, i returned the jacket 3 days ago and i still haven't received my refund. can you help me?"
+151,it,shipping,"Ciao, Sono passati 6 giorni e il pacco con le scarpe non si vede."
+152,it,account,"Buongiorno, Il mio account è stato bloccato sezna spiegazioni."
+153,it,shipping,"Salve, Il corriere dice che ha consegnato ma io non ho ricevuto niente."
+154,en,account,"Hi, I would lkie to change the email on my profile. Thanks."
+155,it,payment,Il pagamento dell'ordine #57622 è stato rifiutato. Potete aiutarmi?
+156,en,payment,"Good morning, The transfer of my balance has been sutck for 8 days. Thanks."
+157,it,not_as_described,"Ciao, L'ordine #98374 non corrisponde alla descrizione: il colore è completamente diverso."
+158,it,refund,"Buongiorno, Voglio un rimborso per l'ordine #18357. Grazie."
+159,en,shipping,"Hello, Order #25915: the shipment is late, can you tell me where it is? Can you help me?"
+160,en,not_as_described,I bought the shoes in size M but a different size arrived. Can you help me?
+161,en,refund,i returned the jeans 19 days ago and i still haven't received my refund. can you help me?
+162,it,not_as_described,"Salve, L'articolo ricevuto (la borsa) è diverso dalle foto dell'annuncio. Potete aiutarmi?"
+163,en,payment,"hi, the transfer of my balance has been stuck for 14 days. waiting for your reply."
+164,it,refund,Ho restituito il maglione 6 giorni fa e non ho ancora ricevuto il rimborso. Garzie.
+165,it,payment,"Ciao, I soldi della vendita (il vestito) non risultano accreditati dopo 16 giorni. Grazie."
+166,en,shipping,"Good morning, It has been 17 days and my parcel with the jacket is nowhere to be seen. Waiting for your reply."
+167,en,shipping,"Hello, My parcel with the jeans has not arrived after 20 days. Waiting for your reply."
+168,en,account,"Hi, My account was blocked without any explanation. Can you help me?"
+169,it,not_as_described,"salve, ho comprato il vestito in taglia m ma è arrivata una taglia diversa."
+170,it,shipping,"Buongiorno, Sono passati 15 giorni e il pacco con il maglione non si vede."
+171,it,shipping,"Salve, Ordine #44970: la spedizione è in ritardo, mi sapete drie dov'è? Grazie."
+172,it,account,Vorrei cambiare l'email del mio profilo. Attendo una risposta.
+173,it,refund,"Buongiorno, Ho restituito le scarpe 20 giorni fa e non ho ancora ricevuto il rimborso."
+174,en,refund,"Hello, I returned the dress 18 days ago and I still haven't received my refund. Thanks."
+175,en,shipping,It has been 7 days and my parcel with the bag is nowhere to be seen. Thanks.
+176,it,account,"Ciao, Vorrei cambiare l'email del mio profilo. Attendo una risposta."
+177,en,shipping,"Hi, It has been 7 days and my parcel with the derss is nowhere to be seen. Can you help me?"
+178,it,shipping,"Buongiorno, Il tracking dell'ordine #19359 è fermo da 7 giorni. Potete aiutarmi?"
+179,it,refund,"Salve, Mi hanno addebitato due volte l'ordine #51124, chiedo il rimborso."
+180,it,not_as_described,"Ciao, Ho comprato le scarpe in taglia M ma è arrivata una taglia diversa. Potete aiutarmi?"
+181,it,payment,"Salve, I soldi della vendita (il maglione) nonr isultano accreditati dopo 18 giorni."
+182,it,account,"Ciao, Ho dimenticato la password e il recupero non mi manda l'email. Grazie."
+183,it,refund,"Buongiorno, Come posso annullare l'ordine #84349 e riavere i miei soldi? Potete aiutarmi?"
+184,en,shipping,"Good morning, The tracking for order #64387 has been stuck for 11 days. Waiting for your reply."
+185,it,not_as_described,"Buongiorno, L'ordine #64896 non corrisponde alla descrizione: il colore è completamente diverso. Grazie."
+186,it,refund,"Ciao, Ho restituito il vestito 10 giorni fa e non ho ancora ricevuto il rimborso. Attendo una risposta."
+187,it,refund,"ciao, come posso annullare l'ordine #95948 e riavere i miei soldi? attendo una risposta."
+188,it,shipping,Il pacco con la borsa non è arrivato dopo 9 giorni. Potete aiutarmi?
+189,en,refund,"i was charged twice for order #41370, i am asking for a refund."
+190,en,account,I forgot my password and the recovery email never arrives. Can you help me?
+191,en,shipping,"Order #98907: the shipment is late, can you tell me where it is?"
+192,it,payment,"Ciao, Il trasferimento del mio saldo è fermo da 6 giorni."
+193,it,account,"buongiorno, vorrei cambiare l'email del mio profilo."
+194,en,shipping,My parcel with the dress has not arrived after 9 days. Can you help me?
+195,it,refund,Come posso annullare l'ordine #27750 e riavere i miei soldi? Attendo una risposta.
+196,en,shipping,"Good morning, Order #59986: the shipment is late, can you tell me where it is? Waiting for your reply."
+197,it,account,"Ciao, Non riesco ad accedere al mio account, la passwodr non funziona. Attendo una risposta."
+198,it,refund,"salve, il rimborso per la borsa è ancora in attesa da 10 giorni. potete aiutarmi?"
+199,en,not_as_described,"hi, i bought the sweater in size m but a different size arrived."
+200,it,account,Vorrei cambiare l'email del mio profilo. Potete aiutarmi?
+201,it,payment,"Buongiorno, Il pagamento dell'ordine #87068 è stato rifiutato. Attendo una risposta."
+202,en,not_as_described,"Hi, I bought the jacket in size M but a different size arrived. Can you help me?"
+203,en,payment,The payment for order #21825 was declined. Waiting for your reply.
+204,en,payment,"Hi, I can't add my card to pay."
+205,it,shipping,"Buongiorno, Sono psasati 12 giorni e il pacco con il maglione non si vede. Attendo una risposta."
+206,it,refund,"Ciao, Mi hanno addebitato due volte l'ordine #87820, chiedo il rimborso."
+207,it,payment,"Ciao, Il pagamento dell'ordine #11597 è stato rifiutato. Attendo una risposta."
+208,en,refund,i want a refund for order #78084. thanks.
+209,en,refund,"I was charged twice for order #68860, I am asking for a refund."
+210,it,not_as_described,"Buongiorno, Il venditore ha descritto l'articolo (la borsa) come nuovo ma è usato e consumato."
+211,it,payment,"Salve, Ho venduto il maglione ma il pagamento non è ancora arrivato sul mio saldo. Potete aiutarmi?"
+212,it,not_as_described,"Ciao, Ho comprato le scarpe in taglia M ma è arrivata una taglia diversa. Attendo una risposta."
+213,it,not_as_described,"Buongiorno, L'articolo ricevuto (il vestito) è diverso dalle foto dell'annuncio. Potete aiutarmi?"
+214,it,payment,"Salve, I soldi della vendita (il maglione) non risultano accreditati dopo 12 giorni."
+215,it,account,"Salve, Il mio account è stato bloccato senza spiegazioni. Potete aiutarmi?"
+216,it,not_as_described,"Ciao, Il venditore ha descritto l'articolo (la giacca) come nuovo ma è usato e consumato. Grazie."
+217,en,not_as_described,"Good morning, The seller described the item (the bag) as new but it is used and worn. Thanks."
+218,it,shipping,Sono passati 9 giorni e il pacco con il maglione non si vede. Grazie.
+219,en,refund,"good morning, i was charged twice for order #20279, i am asking for a refund. thanks."
+220,en,shipping,"Hi, It has been 16 days and my parcel with the jeans is nowher eto be seen. Can you help me?"
+221,it,payment,"Ciao, I soldi della vendita (i jeans) non risultano accreditati dopo 6 giorni."
+222,en,refund,"Good morning, I returned the jacket 3 days ago and I still haven't received my refund. Thanks."
+223,it,account,"ciao, ho dimenticato la password e il recupero non mi manda l'email."
+224,it,shipping,"Ciao, Ordine #66822: la spedizione è in ritardo, mi sapete dire dov'è?"
+225,en,payment,"Good morning, The transfer of my balance has been stuck for 9 days. Waiting for your reply."
+226,it,account,"Ciao, Vorrei cambiare l'email del mio profilo."
+227,en,account,"Hello, I would like to change the email on my profile."
+228,it,not_as_described,il venditore ha descritto l'articolo (le scarpe) come nuovo ma è usato e consumato.
+229,it,refund,"Buongiorno, Il rimborso per le scarpe è ancora in attesa da 5 giorni."
+230,it,account,"ciao, ho dimenticaot la password e il recupero non mi manda l'email."
+231,en,shipping,"Hello, My parcel with the jeans has not arrived after 13 days. Waiting for your reply."
+232,en,payment,I can't add my card to pay. Thanks.
+233,en,shipping,It has been 14 days and my parcel with the jeans is nowhere to be seen. Thanks.
+234,it,not_as_described,"Buongiorno, Nell'annuncio non c'erano macchie ma l'articolo (la giacca) è rovinato. Attendo una risposta."
+235,en,payment,"Hi, The payment for order #58163 was declined."
+236,it,payment,"salve, non riesco ad aggiungere la carta per pagare."
+237,it,payment,"Ciao, Il pagamento dell'ordine #66118 è stato rifiutato. Attendo una risposta."
+238,it,not_as_described,"Ciao, Nell'annuncio no nc'erano macchie ma l'articolo (la giacca) è rovinato. Attendo una risposta."
+239,en,shipping,"Hi, The tracking for order #68841 has been stuck for 12 days. Can you help me?"
+240,en,shipping,"Order #71993: the shipment is late, can you tell me where it is?"
+241,it,refund,"salve, il rimborso per la giacca è ancora in attesa da 4 giorni. potete aiutarmi?"
+242,en,refund,"Hi, My refund for the dress has been pending for 16 days."
+243,it,not_as_described,L'articolo ricevuto (la giacca) è diverso dalle foto dell'annuncio. Attendo una risposta.
+244,en,refund,"Good morning, How can I cancel order #13840 and get my money back? Thanks."
+245,en,refund,"Good morning, I returned the jacket 14 days ago and I still haven't received my refund. Can you help me?"
+246,en,payment,the transfer of my balance has been stuck for 20 days. thanks.
+247,it,payment,"buongiorno, il pagamento dell'ordine #70248 è stato rifiutato. grazie."
+248,it,account,Ho dimenticato la password e il recupero non mi manda l'email.
+249,it,payment,Non riesco ad aggiungere la carta per pagare. Attendo una risposta.
+250,en,payment,"Hello ,I can't add my card to pay. Waiting for your reply."
+251,en,shipping,"Hi, The tracking for order #22026 has been stuck for 3 days."
+252,it,not_as_described,"Salve, Ho comprato i jeans in taglia M ma è arrivata una taglia diversa. Potete aiutarmi?"
+253,it,refund,Voglio un rimborso per l'ordine #69552. Potete aiutarmi?
+254,it,refund,"Buongiorno, Come posso annullare l'ordine #26864 e riavere i miei soldi?"
+255,it,not_as_described,"Buongiorno, L'articolo ricevuto ( ijeans) è diverso dalle foto dell'annuncio. Grazie."
+256,en,not_as_described,"Good morning, Order #90200 does not match the description: the colour is completely different."
+257,en,refund,"Hello, I want a refund for order #42302. Thanks."
+258,it,not_as_described,"Buongiorno, L'ordine #17019 non corrisponde alla descrizione: il colore è completamente diverso. Attendo una risposta."
+259,it,shipping,"Ciao, Il pacco con la giacca non è arrivato dopo 15 giorni. Attendo una risposta."
+260,it,refund,"salve, mi hanno addebitato due volte l'ordine #99486, chiedo il rimborso. attendo una risposta."
+261,it,refund,"Salve, Cmoe posso annullare l'ordine #73300 e riavere i miei soldi?"
+262,en,account,"I can't log in to my account, my password doesn't work. Can you help me?"
+263,it,shipping,Il pacco con il vestito non è arrivato dopo 13 giorni. Potete aiutarmi?
+264,it,refund,"Mi hanno addebitato due volte l'ordine #86434, chiedo il rimborso. Grazie."
+265,it,shipping,"Buongiorno, Il pacco con la borsa non è arrivato dopo 16 giorni."
+266,it,payment,I soldi della vendita (le scarpe) non risultano accreditati dopo 15 giorni.
+267,it,not_as_described,"Ciao, L'articolo ricevuto (i jeans) è diverso dalle foto dell'annuncio. Potete aiutarmi?"
+268,it,shipping,"Salve, Sono passati 13 giorni e il pacco con la borsa non si vede. Grazie."
+269,en,payment,"Hello, The transfer of my balance has been stuck for 14 days. Thanks."
+270,en,refund,"I was charged twice for order #58374, I am asking ofr a refund."
+271,it,not_as_described,"buongiorno, nell'annuncio non c'erano macchie ma l'articolo (le scarpe) è rovinato. grazie."
+272,en,account,my account was blocked without any explanation.
+273,it,not_as_described,"ciao, ho comprato la borsa in taglia m ma è arrivata una taglia diversa."
+274,en,refund,"Good morning, I was charged twice for order #67469, I am asking for a refund. Thanks."
+275,it,refund,Voglio un rimborso per l'ordine #77272.
+276,en,payment,The money from my sale (the jeans) has not been credited after 7 days. Can you help me?
+277,en,payment,the money from my sale (the shoes) has not been credited after 6 days. thanks.
+278,it,account,"Salve, Vorrei cambiare l'email del mio profilo. Grazie."
+279,en,shipping,My parcel with the shoes has not arrived after 16 days.
+280,en,not_as_described,"Good morning, Order #18399 does not match the description: the colour is completely different. Can you help me?"
+281,en,refund,"I was charged twice for order #22795, I am asking for a refund."
+282,it,account,"Ciao, Il mio account è stato bloccato senza spiegazioni."
+283,en,not_as_described,"hello, the listing showed no stains but the item (the jacket) is damaged. thanks."
+284,en,shipping,"Good morning, Order #78614: the shipment is late, can you tell me where it is? Thanks."
+285,en,refund,I want a refund for order #4068.9 Thanks.
+286,en,refund,"Hi, I returned the jacket 15 days ago and I still haven't received my refund. Thanks."
+287,it,not_as_described,"Salve, Ho comprato il maglione in taglia M ma è arrivata una taglia diversa. Attendo una risposta."
+288,en,refund,"Hi, How can I cancel order #28327 and get my money back? Waiting for your reply."
+289,it,not_as_described,"buongiorno, ho comprato i jeans in taglia m ma è arrivata una taglia diversa."
+290,en,refund,i returned the sweater 12 days ago and i still haven't received my refund.
+291,en,refund,"Good morning, I want a refund for order #93209. Thanks."
+292,it,account,"salve, vorrei cambiare l'email del mio profilo. grazie."
+293,it,shipping,"Salve, Il pacco con i jeans non è arrivato dopo 7 giorni."
+294,it,account,"Salve, Ho dimenticato la password e il recupero non mi manda l'email. Potete aiutarmi?"
+295,it,account,"buongiorno, ho dimenticato la password e il recupero non mi manda l'email. grazie."
+296,it,not_as_described,"Salve, L'ordine #76628 non corrisponde alla descrizione: il colore è completamente diverso."
+297,en,not_as_described,"hi, the seller described the item (the jacket) as new but it is used and worn. can you help me?"
+298,it,refund,"Buongiorno, Come posso annullare l'ordine #58567 e riaverei  miei soldi? Attendo una risposta."
+299,it,refund,Il rimborso per la giacca è ancora in attesa da 5 giorni.
+300,it,account,Ho dimenticato la password e il recupero nonm i manda l'email. Attendo una risposta.
+301,it,account,"Ciao, Ho dimenticato la password e il recupero non mi manda l'email."
+302,en,account,"Hi, I can't log in to my account, my password doesn't work. Waiting for your reply."
+303,en,payment,The money from my sale (the bag) has not been credited after 7 days.
+304,it,shipping,"Ciao, Ordine #22196: la spedizione è in ritardo, mi sapete dire dov'è? Potete aiutarmi?"
+305,it,not_as_described,Il venditore ha descritto l'articolo (la giacca) come nuovo ma è usato e consumato. Attendo una risposta.
+306,it,payment,"Ciao, I soldi delal vendita (i jeans) non risultano accreditati dopo 13 giorni. Grazie."
+307,it,account,"Salve, Ho dimenticato la password e il recupero non mi manda l'email. Grazie."
+308,it,refund,come posso annullare l'ordine #81176 e riavere i miei soldi? attendo una risposta.
+309,it,not_as_described,"Salve, Ho comprato la giacca in taglia M ma è arrivata una taglia diversa. Grazie."
+310,en,shipping,"hello, the courier says it was delivered but i received nothing. waiting for your reply."
+311,en,account,"Hi, I would like to change the email on my profile."
+312,en,not_as_described,"Hello, I bought the sweater in size M but a different size arrived. Waiting for your reply."
+313,en,not_as_described,"Good morning, The seller described the item (the jeans) as new but it is used and worn. Can you help me?"
+314,en,account,"Hello, I can't log in to my account, my password doesn't work. Thanks."
+315,it,not_as_described,"Buongiorno, L'ordine #98702 non corrisponde alla descrizione: il colore è completamente diverso. Potete aiutarmi?"
+316,en,refund,"good morning, i returned the sweater 15 days ago and i still haven't received my refund. thanks."
+317,en,refund,"hello, i want a refund for order #19828. thanks."
+318,en,not_as_described,"Good morning, Order #96736 does not match the description: the colour is completely different. Thanks."
+319,en,refund,"Hello, How can I cancel order #30922 and get my money back? Can you help me?"
+320,it,payment,"ciao, il trasferimento del mio saldo è fermo da 18 giorni. attendo una risposta."
+321,it,shipping,"Ciao, Il pacco con il vestito non è arrivato dopo 7 giorni."
+322,it,not_as_described,"Buongiorno, L'ordine #95778 non corrisponde alla descrizione: il colore è completamente diverso. Potete aiutarmi?"
+323,en,not_as_described,"good morning, the seller described the item (the jeans) as new but it is used and worn. waiting for your reply."
+324,it,account,"Salve, Vorrei cambiare l'email del mio profilo. Attendo una risposta."
+325,en,refund,"Hello, I returned the shoes 8 days ago and I still haven't received my refund. Thanks."
+326,en,shipping,"Order #62262: the shipment is late, can you tell me where it is? Thanks."
+327,it,refund,"ciao, voglio un rimborso per l'ordine #72580. potete aiutarmi?"
+328,it,shipping,"Buongiorno, Il tracking dell'ordine #74686 è fermo da 19 giorni. Grazie."
+329,en,shipping,"Hello, My parcel with the dress has not arrived after 17 days."
+330,it,payment,Non riesco ad aggiungere la carta per pagare. Grazei.
+331,en,refund,"Good morning, I want a refund for order #70960. Waiting for your reply."
+332,en,account,"Hi, I forgot my password and the recovery email never arrives. Waiting for your reply."
+333,en,shipping,"Hi, It has been 3 days and my parcel with the shoes is nowhere to be seen. Thanks."
+334,it,payment,il pagamento dell'ordine #40924 è stato rifiutato. potete aiutarmi?
+335,it,account,"Salve, Non im arriva il codice di verifica per entrare."
+336,it,not_as_described,L'articolo ricevuto (i jeans)è  diverso dalle foto dell'annuncio.
+337,en,refund,"Hello, I returned the sweater 7 days ago and I still haven't received my refund. Can you help me?"
+338,en,refund,"Hi, I was charged twice for order #42129, I am asking for a refund. Thnaks."
+339,it,payment,"salve, il pagamento dell'ordine #62021 è stato rifiutato. potete aiutarmi?"
+340,en,refund,I want a refund for order #16026. Waiting for your reply.
+341,en,shipping,"Order #71487: the shipment i slate, can you tell me where it is? Thanks."
+342,en,not_as_described,the listing showed no stains but the item (the dress) is damaged.
+343,en,not_as_described,"Good morning, I bought the bag in size M but a different size arrived. Thanks."
+344,en,shipping,"Good morning, My parcel with the sweater has not arrived after 14 days. Thanks."
+345,en,account,"Hello, I forgot my password and the recovery emailn ever arrives. Can you help me?"
+346,it,not_as_described,L'ordine #78495 non corrisponde alla descrizione: il colore è completamente diverso.
+347,en,account,"Hello, I can't log in to my account, my password doesn't work."
+348,it,account,ho dimenticato la password e il recupero non mi manda l'email. attendo una risposta.
+349,it,not_as_described,ho comprato il maglione in taglia m ma è arrivata una taglia diversa. grazie.
+350,en,shipping,"Hi, The courier says it was delivered but I received nothing. Can you help me?"
+351,en,refund,"Good morning, I was charged twice for order #28242, I am asking for a refund. Can you help me?"
+352,it,shipping,"Buongiorno, Il tracking dell'ordine #82132 è fermo da 17 giorni. Grazie."
+353,it,refund,"Buongiorno, Il rimborso per il maglione è ancora in attesa da 9 giorni."
+354,it,account,"Salve, Non mi arriva il codice di verifica per entrare. Grazie."
+355,it,payment,"Ciao, I soldi della vendita (la giacca) non risultano accreditati dopo 8 giorni. Potete aiutarmi?"
+356,en,not_as_described,"Hello, The seller described the item (the sweater) as new but it is used and worn. Can you help me?"
+357,en,payment,"Good morning, I can't ad dmy card to pay. Waiting for your reply."
+358,it,shipping,"Salve, Il tracking dell'ordine #21164 è fermo da 12 giorni. Grazie."
+359,it,shipping,"Buongiorno, Il corriere dice che ha consegnato ma io non ho ricevuto niente. Potete aiutarmi?"
+360,it,refund,Come posso annullare l'ordine #33002 e riavree i miei soldi?
+361,en,shipping,"Hi, The courier says it was delivered but I received nothing. Waiting for your reply."
+362,it,refund,"Ciao, Ho restituito la borsa 6 giorni fa e non ho ancora ricevuto il rimborso."
+363,en,account,"hello,m y account was blocked without any explanation."
+364,en,refund,"Hello, I want a refund for order #42819. Waiting for your reply."
+365,en,account,"i can't log in to my account, my password doesn't work. can you help me?"
+366,it,account,"Salve, Ho dimenticato la password e il recupero non mi manda l'email."
+367,en,account,"Hello, I forgot my password and the recovery email never arrives. Thanks."
+368,en,refund,"Hello, How can I cancel order #77425 and get my money back? Can you help me?"
+369,it,payment,"Salve, Ho venduto il vestito ma il pagamento non è ancora arrivato sul mio saldo."
+370,it,refund,"ciao, mi hanno addebitato due volte l'ordine #79391, chiedo il rimborso. attendo una risposta."
+371,it,shipping,"Ciao, Il pacco con la borsa non è arrivato dopo 16 giorni. Potete aiutarmi?"
+372,en,payment,"Hi, I can't add my card to pay. Can you help me?"
+373,en,refund,"i was charged twice for order #34430, i am asking for a refund."
+374,en,payment,"Hi, The money from my sale (the jeans) has not been credited after 20 days. Waiting for your reply."
+375,en,not_as_described,"Good morning, The seller described the item (the sweater) as new but it is used and worn. Waiting for your reply."
+376,en,not_as_described,"hello, the seller described the item (the dress) as new but it is used and worn. waiting for your reply."
+377,it,payment,Non riesco ad aggiungere la carta per pagare. Grazie.
+378,it,shipping,"Salve, Sono passati 12 giorni e il pacco con la giacca non si vede."
+379,en,payment,The money from my sale (the sweater) has not been credited after 17 dyas. Can you help me?
+380,en,shipping,"Good morning, The courier says it was delivered but I received nothing. Thanks."
+381,it,account,"Ciao, Il mio account è stato bloccato senza spiegazioni. Attendo una risposta."
+382,en,refund,"Hello, How can I cancel order #25655 and get my money back? Can you help me?"
+383,en,refund,"Hello, I was charged twice for order #57124, I am asking for a refund. Thanks."
+384,en,refund,"Good morning, How can I cancel order #79168 and get my money back?"
+385,it,account,"Buongiorno, Ho dimenticato la password e il recupero non mi manda l'email. Grazie."
+386,it,account,"salve, ho dimenticato la password e il recupero non mi manda l'email. grazie."
+387,it,payment,Il pagamento dell'ordine #74419 è stato rifiutato. Potete aiutarmi?
+388,it,account,"salve, il mio account è stato bloccato senza spiegazioni. grazie."
+389,it,refund,"Salve, Il rimborso per il vestito è ancora in attesa da 20 giorni. Potete aiutarmi?"
+390,it,payment,"ciao, i soldi della vendita (il maglione) non risultano accreditati dopo 4 giorni."
+391,en,shipping,"good morning, order #47700: the shipment is late, can you tell me where it is? waiting for your reply."
+392,it,not_as_described,Nell'annuncio non c'erano macchie ma l'articolo (la borsa) è rovinato. Grazie.
+393,it,refund,Come posso annullare l'ordine #46877 e riavere i miei soldi?
+394,en,shipping,"Hello, The courier says it was delivered but I received nothing. Waiting for your reply."
+395,it,refund,ho restituito la giacca 11 giorni fa e non ho ancora ricevuto il rimborso. attendo una risposta.
+396,en,refund,"I was charged twice for order #9238,8 I am asking for a refund."
+397,en,payment,The transfer of my balance has been stuck for 3 days. Thanks.
+398,it,not_as_described,nell'annuncio non c'erano macchie ma l'articolo (la borsa) è rovinato. grazie.
+399,it,refund,"Buongiorno, Mi hanno addebitato due volte l'ordine #36422, chiedo il rimborso. Potete aiutarmi?"
+400,it,not_as_described,"Ciao, Ho comprato il maglione in taglia M ma è arrivata una taglia diversa."
+401,en,refund,"Hello, I want a refund for order #52778. Waiting for your reply."
+402,en,payment,"Hello, The transfer of my balance has been stuck for 19 days. Waiting for your reply."
+403,it,payment,"Buongiorno, Ho venduto le scarpe ma il pagamento non è ancora arrivato sul mio saldo. Potete aiutarmi?"
+404,en,shipping,"Hi, My parcel with teh jeans has not arrived after 16 days. Thanks."
+405,en,payment,"Good morning, I sold the bag but the payment has not reached my balance yet."
+406,en,not_as_described,Order #92712 does not match the description: the colour is completely different. Waiting for your reply.
+407,en,not_as_described,"good morning, i bought the dress in size m but a different size arrived."
+408,en,shipping,"Hi, It has been 13 days and my parcel with the jeans is nowhere to be seen. Thanks."
+409,en,account,"Good morning, I would like to change the email on my profile."
+410,it,not_as_described,"Ciao, Il venditore ha descritto l'articolo (i jeans) come nuovo ma è usato e consumato. Potete aiutarmi?"
+411,en,refund,"Good morning, My refund for the bag has been pending for 20 days."
+412,it,not_as_described,"Ciao, L'ordine #17144 non corrisponde alla descrizione: il colore è completamente diverso. Grazie."
+413,it,not_as_described,"Salve, L'articolo ricevuto (il vestito) è diverso dalle foto dell'annuncio. Grazie."
+414,it,shipping,"Salve, Sono passati 12 giorni e il pacco con i jeans non si vede. Attendo una risposta."
+415,it,payment,"Buongiorno, Ho venduto la giacca ma il pagamento non è ancora arrivato sul mio saldo. Potete aiutarmi?"
+416,en,refund,"Hi, I want a refund for order #39098."
+417,it,shipping,"Salve, Sono passati 12 giorni e il pacco con la giacca non si vede. Potete aiutarmi?"
+418,it,refund,"Buongiorno, Il rimborso per il vestito è ancora in attesa da 11 giorni. Attendo una risposta."
+419,it,not_as_described,Ho comprato il maglione in taglia M ma è arrivata una taglia diversa. Attendo una risposta.
+420,it,payment,"Buongiorno, Ho venduto la giacca ma il pagamento non è ancora arrivato sul mio saldo. Attendo una risposta."
+421,it,payment,"Salve, Il pagamento dell'ordine #54605 è stato rifiutato. Grazie."
+422,en,shipping,It has been 3 days and my parcel with the jeans is nowhere to be seen. Thanks.
+423,it,shipping,Sono passati 9 giorni e il pacco con la borsa non si vede. Potete aiutarmi?
+424,en,not_as_described,"good morning, i bought the dress in size m but a different size arrived. waiting for your reply."
+425,en,not_as_described,"Hi, The listing showed no stains but the item (the jacket) is damaged."
+426,it,shipping,"Buongiorno, Ordine #48175: la spedizione è in ritardo, mi sapete dire dov'è? Potete aiutarmi?"
+427,en,refund,"hello, i was charged twice for order #57059, i am asking for a refund."
+428,en,not_as_described,"Hello, I bought the shoes in size M but a different size arrived. Waiting for your reply."
+429,en,not_as_described,the listing showed no stains but the item (the jacket) is damaged.
+430,en,not_as_described,"Hello, Order #29603 does not match the description: the colour is completely different. Can you help me?"
+431,it,account,"Salve, Vorrei cambiare l'email del mio profilo."
+432,en,account,"Hello, I would like to change the email on my profile. Waiting for your reply."
+433,en,payment,"Good morning, The payment for order #99694 was declined. Can you help me?"
+434,en,account,"Hi, I would like to change the email on my profile. Can you help me?"
+435,en,account,"good morning, my account was blocked without any explanation. thanks."
+436,en,account,I forgot my password and the recovery email never arrives. Waiting for your reply.
+437,en,not_as_described,"Hi, I bought the bag in size M but a different size arrived. Can you help me?"
+438,en,not_as_described,Order #67367 does notm atch the description: the colour is completely different.
+439,it,shipping,il tracking dell'ordine #82309 è fermo da 17 giorni. grazie.
+440,en,account,"Hi, My account was blocked without any explanation."
+441,it,account,non mi arriva il codice di verifica per entrare. attendo una risposta.
+442,en,refund,"Good morning, My refund for the jeans has been pending for 12 days. Can you help me?"
+443,it,account,"Ciao, Non riesco ad accedere al mio account, la password non funziona. Grazie."
+444,it,refund,"Ciao, Come posso annullare l'ordine #35729 e riavere i miei soldi? Potete aiutarmi?"
+445,it,refund,"Buongiorno, Voglio un rimborso per l'ordine #80143. Potete aiutarmi?"
+446,it,payment,"Ciao, Ho venduto la giacca ma il pagamento non è ancora arrivato sul mio saldo. Grazie."
+447,en,account,"Hi, My account was blocked without any explanation. Thanks."
+448,it,account,"non riesco ad accedere al mio account, la password non funziona."
+449,en,account,"Hi, I would like to change the email on my profile. Waiting for your reply."
+450,it,refund,"Salve, Voglio un rimborso per l'ordine #44803. Grazie."
+451,en,not_as_described,I bought the jeans in size M but a different size arrived. Thanks.
+452,en,not_as_described,"Hi, I bought the jeans in size M but a different size arrived. Thanks."
+453,it,shipping,Sono passati 7 giorni e il pacco con la borsa non si vede. Potete aiutarmi?
+454,en,not_as_described,"Good morning, The item I received (the jacket) is different from the photos in the listing. Waiting for your reply."
+455,it,payment,Il pagamento dell'ordine #84086 è stato rifiutato. Attendo una risposta.
+456,en,payment,"Hello, The apyment for order #31707 was declined. Waiting for your reply."
+457,en,not_as_described,Order #27548 does not match the description: the colour is completely different. Thanks.
+458,en,not_as_described,"hi, i bought the jacket in size m but a different size arrived. thanks."
+459,en,payment,i can't add my card to pay. can you help me?
+460,it,payment,"ciao, ho venduto la borsa ma il pagamento non è ancora arrivato sul mio saldo. attendo una risposta."
+461,it,not_as_described,"Salve, L'ordine #75035 non corrisponde alla descrizione: il colore è completamente diverso. Attendo una risposta."
+462,en,payment,"Hello, The transfer of my balance has been stuck for 20 days. Can you help me?"
+463,en,payment,"Hi, The payment for order #54778 was declined."
+464,it,shipping,"Ciao, Il tracking dell'ordine #54608 è fermo da 11 giorni. Attendo una risposta."
+465,en,payment,I sold the shoes but the payment has not reached my balance yet. Thanks.
+466,it,payment,"Ciao, Non riesco ad aggiungere la carta per pagare. Attendo una risposta."
+467,en,not_as_described,the seller described the item (the jeans) as new but it is used and worn. thanks.
+468,it,payment,"Ciao, I soldi della vendita (il vestito) non risultano accreditati dopo 17 giorni."
+469,it,refund,"Salve, Voglio un rimborso per l'ordine #87015."
+470,it,shipping,"Salve, Il pacco con la giacca non è arrivato dopo 11 giorni. Potete aiutarmi?"
+471,it,not_as_described,Ho comprato le scarpe in taglia M ma è arrivata una taglia diversa. Grazie.
+472,it,account,"buongiorno, il mio account è stato bloccato senza spiegazioni."
+473,it,refund,Ho restituito il vestito 16 giorni fa e nno ho ancora ricevuto il rimborso. Potete aiutarmi?
+474,it,not_as_described,L'articolo rcievuto (i jeans) è diverso dalle foto dell'annuncio. Attendo una risposta.
+475,it,shipping,"Buongionro, Il tracking dell'ordine #72616 è fermo da 11 giorni. Grazie."
+476,en,payment,I sold the dress but the payment has not reached my balance yet.
+477,en,not_as_described,The seller described the item (the dress) as new but it is used and worn. Can you help me?
+478,it,payment,"Ciao, Ho venduto la giacca ma il pagamento non è ancora arrivato sul mio saldo. Attendo una risposta."
+479,it,not_as_described,"Salve, L'ordine #97232 non corrisponde alla descrizione: il colore è completamente diverso."
+480,en,account,"hi, i would like to change the email on my profile. can you help me?"
+481,it,payment,Il pagamento dell'ordine #20956 è stato rifiutato. Grazie.
+482,en,refund,"Hello, How can I cancel order #25650 and get my money back? Can you help me?"
+483,it,payment,"Ciao, Il pagamento dell'ordine #43868 è stato rifiutato. Potetea iutarmi?"
+484,en,payment,"Hello, I sold the jacket but the payment has not reached my balance yet. Waiting for your reply."
+485,it,payment,Ho venduto i jeans ma il pagamento non è ancora arrivato sul mio saldo.
+486,it,not_as_described,"salve, il venditore ha descritto l'articolo (il maglione) come nuovo ma è usato e consumato. grazie."
+487,en,not_as_described,"Good morning, I bought the jeans in size M but a different size arrived. Can you help me?"
+488,en,refund,"Hello, I returned the sweater 11 days ago and I still haven't received my refund. Can you help me?"
+489,it,refund,"salve, mi hanno addebitato due volte l'ordine #22624, chiedo il rimborso. potete aiutarmi?"
+490,it,payment,"Ciao, Il trasferimento del mio saldo è fermo da 7 giorni."
+491,en,payment,"Hi, I sold the dress but the payment has not reached my balance yet. Thanks."
+492,en,not_as_described,"hello, order #62947 does not match the description: the colour is completely different. waiting for your reply."
+493,en,not_as_described,"Hello, The listing showed no stains but the item (the shoes) is damaged. Waiting for yoru reply."
+494,it,not_as_described,Nell'annuncio non c'erano macchie ma l'articolo (i jeans) è rvoinato. Attendo una risposta.
+495,en,not_as_described,"Hi, I bought the jeans in size M but a different size arrived. Waiting for your reply."
+496,en,shipping,"hi, my parcel with the dress has not arrived after 5 days. thanks."
+497,it,refund,Come posso annullare l'ordine #89963 e riavere i miei soldi? Potete aiutarmi?
+498,it,not_as_described,Il venditore ha descritto l'articolo (il vestito) come nuovo ma è usato e consumato. Attendo una risposta.
+499,it,account,"Buongiorno, Vorrei cambiare l'email del mio profilo. Grazie."
+500,en,not_as_described,"Hello, The listing shwoed no stains but the item (the jeans) is damaged. Waiting for your reply."
+501,en,not_as_described,"Hello, The item I received (the jeans) is different from the photos in the listing. Waiting for your reply."
+502,en,account,"Hello, I would like to change the email on my profile. Thanks."
+503,en,refund,"I was charged twice for order #64238, I am asking for a refund. Thanks."
+504,it,payment,"Buongiorno, Non riesco ad aggiungere la carta per pagare. Potete aiutarmi?"
+505,en,shipping,"Hi, Order #40775: the shipment is late, can you tell me where it is?"
+506,it,account,"Ciao, oVrrei cambiare l'email del mio profilo."
+507,en,refund,I want a refund for order #56627. Thanks.
+508,it,payment,"salve, i soldi della vendita (il vestito) non risultano accreditati dopo 17 giorni. attendo una risposta."
+509,it,refund,"salve, mi hanno addebittao due volte l'ordine #74382, chiedo il rimborso. grazie."
+510,en,not_as_described,I bought the sweater in size M but a different size arrived.
+511,it,refund,"Buongiorno, Mi hanno addebitato due volte l'ordine #32463, chiedo il rimborso."
+512,it,account,"buongiorno, non mi arriva il codice di verifica per entrare. potete aiutarmi?"
+513,it,account,"Salve, Vorrei cambiaer l'email del mio profilo. Potete aiutarmi?"
+514,en,shipping,"Hello, Order #67340: the shipment is late, can you tell me where it is? Can you help me?"
+515,en,refund,"I was charged twice for order #51688, I am asking for a refund. Waiting for your reply."
+516,en,payment,"Good morning, The omney from my sale (the sweater) has not been credited after 18 days."
+517,it,refund,"Salve, Voglio un rimborso per l'ordine #87569. Potete aiutarmi?"
+518,it,account,"ciao, ho dimenticato la password e il recuper onon mi manda l'email. potete aiutarmi?"
+519,it,not_as_described,"Ciao, H ocomprato il vestito in taglia M ma è arrivata una taglia diversa. Attendo una risposta."
+520,en,shipping,"Hi, It has been 17 days and my parcel with the dress is nowhere to be seen. Waiting for your reply."
+521,it,not_as_described,"Buongiorno, L'articolo ricevuto (il vestito) è diverso dalle foto dell'annuncio. Grazie."
+522,en,not_as_described,the listing showed no stains but the item (the jacket) is damaged. waiting for your reply.
+523,it,not_as_described,"Ciao, Il venditore ha descritto l'articolo (la borsa) come nuovo ma è usato e consmuato. Grazie."
+524,it,account,"Non riesco ad accedere al mio account, la password non funziona. Attendo una risposta."
+525,it,refund,Ho restituito la giacca 13 giorni fa e non h oancora ricevuto il rimborso. Attendo una risposta.
+526,it,shipping,"Ciao, Il corriere dice che ha consegnato ma io non ho ricevuto niente. Attendo una risposta."
+527,it,shipping,"salve, il corriere dice che ha consegnato ma io non ho ricevuto niente. potete aiutarmi?"
+528,it,account,"salve, non riesco ad accedere al mio account, la password non funziona. attendo una risposta."
+529,it,payment,I soldi della vendita (la giacca) non risultano accreditati dopo 9 giorni.
+530,en,refund,"Hello, How can I cancel order #86122 and get my money back? Can you help me?"
+531,en,account,"good morning, i am not recieving the verification code to log in. waiting for your reply."
+532,it,refund,"Ciao, Come posso annullare l'ordine #20357 e riavere i miei soldi?"
+533,en,refund,Iw ant a refund for order #42321. Can you help me?
+534,en,not_as_described,The seller described the item (the dress) as new but it is used and worn. Thanks.
+535,it,payment,"ciao, il pagamento dell'ordine #22561 è stato rifiutato. potete aiutarmi?"
+536,it,payment,"Buongiorno, Ho venduto la borsa ma il pagamento non è ancora arrivato sul mio saldo."
+537,en,account,"I can't log in to my account, my password doesn't work. Thanks."
+538,en,payment,"hi, i can't add my card to pay."
+539,en,shipping,"hello, the courier says it was delivered but i received nothing. thanks."
+540,en,refund,I want a refund for order #41217.
+541,en,shipping,"Hello, Order #80912: the shipment is late, can you tell me where it is? Thanks."
+542,en,shipping,"Hello, The courier says it was delivered but I received nothing. Can you help me?"
+543,it,refund,"mi hanno addebitato due volte l'ordine #90980, chiedo il rimborso."
+544,en,payment,"Hello, I sold the shoes but the payment has not reached my balance yet. Can you help me?"
+545,en,not_as_described,"Hi, The seller described the item (the jacket) as new but it is used and worn. Waiting for your reply."
+546,en,not_as_described,The item I received (the shoes) is different from the photos in the listing. Waiting for your reply.
+547,en,not_as_described,"Hi, I bought the shoes in size M but a different size arrived."
+548,it,refund,"Buongiorno, Come posso annullare l'ordine #34966 e riavere i miei soldi? Attendo una risposta."
+549,en,shipping,"hi, the tracking for order #72722 has been stuck for 17 days. can you help me?"
+550,it,not_as_described,"Ciao, 'Larticolo ricevuto (le scarpe) è diverso dalle foto dell'annuncio."
+551,en,payment,"Good morning, I can't add my card to pay. Thanks."
+552,en,shipping,"Hello, Order #30706: the shipment is late, can you tell me where it is?"
+553,en,shipping,"Hello, Order #18232: the shipment is late, can you tell me where i tis?"
+554,en,payment,"good morning, i can't add my card to pay."
+555,it,account,"Ciao, Non riesco ad accedere al mio account, la password non funziona."
+556,en,refund,"Hi, I was charged twice for order #83905, I am asking for a refund. Can you help me?"
+557,en,payment,"Hi, I can't add my cardt o pay."
+558,en,refund,"hello, my refund for the dress has been pending for 13 days. thanks."
+559,it,shipping,"Buongiorno, Sono passati 20 giorni e il pacco con le scarpe non si vede. Attendo una risposta."
+560,en,shipping,"Hello, The courier says it was delivered but I received nothing. Thanks."
+561,it,payment,"Ciao, Il trasferimento del mio saldo è fermo da 18 giorni. Grazie."
+562,en,account,"Hello, My account was blocked without any explanation."
+563,it,payment,"Salve, I soldi della vendita (la borsa) non risultano accreditati dopo 8 giorni. Attendo una risposta."
+564,it,payment,"Buongiorno, Il pagamento dell'ordine #83726 è stato rifiuttao. Attendo una risposta."
+565,en,payment,"Good morning, The money from my sale (the dress) has not been credited after 5 days."
+566,en,account,"Hello, My account was blocked without any explanation. Can you help me?"
+567,it,payment,"Buongiorno, I soldi della vendita (la borsa) non risultano accreditati dopo 19 giorni. Grazie."
+568,en,payment,"Good morning, The money from my sale( the shoes) has not been credited after 16 days. Waiting for your reply."
+569,en,payment,"hi, the payment for order #23019 was declined. waiting for your reply."
+570,it,not_as_described,L'articolo ricevuto (il vestito) è diverso dalle foto dell'annuncio.
+571,it,payment,"Salve, I soldi della vendita (la borsa) non risultano accreditati dopo 20 giorni. Potete aiutarmi?"
+572,it,not_as_described,L'ordine #76074 non corrisponde alla descrizione: il colore è completamente diverso.
+573,en,refund,"Good morning, I returned the sweater 7 days ago and I still haven't received my refund. Can you help me?"
+574,it,not_as_described,"ciao, ho comprato la borsa in taglia mm a è arrivata una taglia diversa. potete aiutarmi?"
+575,en,payment,"Good morning, I sold the jeans but the payment has not reached my balance yet. Waiting for your reply."
+576,en,refund,"Hello, I returned the jeans 6 days ago and I still haven't received my refund. Can you help me?"
+577,en,payment,"Hello, The payment for order #25855 was declined. Can you help me?"
+578,en,payment,"Hello, The payment for order #27332 was declined. Can you help me?"
+579,it,not_as_described,"Salve, L'articolo ricevuto (il maglione) è diverso dalle foto dell'annuncio. Attendo una risposta."
+580,it,refund,"Salve, Ho restituito il vestito 10 giorni fa e non ho ancora ricevuto il rimborso. Attendo una risposta."
+581,en,shipping,"Good morning, Order #92691: the shipment is late, can you tell me where it is? Thanks."
+582,it,refund,Ho restituito la giacca 3 giorni f ae non ho ancora ricevuto il rimborso.
+583,en,shipping,the courier says it was delivered but i received nothing. waiting for your reply.
+584,en,refund,"Hello, I want a refund for order #72613. Can you help me?"
+585,en,not_as_described,The item I received (the jeans) is different from the photos in the listing. Can you help me?
+586,en,not_as_described,"Hi, I bought the dress in size M but a different size arrived."
+587,it,not_as_described,L'articolo ricevuto (la borsa) è diverso dalle foto dell'annuncio.
+588,en,account,"Hi, I forgot my password and the recovery email never arrives."
+589,it,payment,"Ciao, I soldi della vendita (la giacca) non risultano accreditati dopo 14 giorni."
+590,en,account,my account was blocked without any explanation. waiting for yoru reply.
+591,it,payment,"Salve, Il trasferimento del mio saldo è fermo da 17 giorni. Grazie."
+592,it,shipping,"Ciao, Il tracking dell'ordine #42325 è fermo da 7 giorni."
+593,en,account,"Good morning, My account was blocked without any explanation. Thakns."
+594,en,payment,"Hello, I can't add my card to pay."
+595,en,shipping,"Hi, The tracking for order #18992 has been stuck for 9 days. Can you help me?"
+596,en,payment,"Hello, The transfer of my balance has been stuck for 20d ays. Waiting for your reply."
+597,en,shipping,"Hello, Order #84177: the shipment is late, can you tell me where it is?"
+598,it,refund,"Buongiorno, Come posso annullare l'ordine #45986 e riavere i miei soldi? Grazie."
+599,it,payment,"Ciao, Non riesco ad aggiungere la carta per pagare. Grazie."
+600,it,refund,"Salve, Come posso annullare l'ordine #85225 e riavere i miei soldi? Attendo una risposta."
+601,en,payment,"Hi, I sold the jeans but the payment has not reached my blaance yet."
+602,it,refund,"Salve, Mi hanno addebitato due volte l'ordine #10679, chiedo il rimborso."
+603,en,payment,The money from my sale (the sweater) has not been credited after 17 days. Waiting for your reply.
+604,en,payment,I sold the jacket but the payment has not reached my balance yet.
+605,en,account,"Good morning, I forgot my password and the recovery email never arrives. Waiting for your reply."
+606,en,payment,I can't add my card to pay.
+607,it,refund,"Salve, Il rimborso per il vestito è ancora in attesa da 7 giorni. Grazie."
+608,en,account,I am not receiving the verification code to lgo in. Thanks.
+609,it,account,"Ciao, Il mio account è stato bloccato senza spiegazioni. Potete aiutarmi?"
+610,en,not_as_described,"Hello, The item I received (the shoes) is different from the photos in the listing. Can you help me?"
+611,en,not_as_described,"hi, the seller described the item (teh dress) as new but it is used and worn."
+612,it,payment,"Salve, Ho venduto il maglione ma il pagamento non è ancora arrivato sul mio saldo. Attendo una risposta."
+613,en,shipping,"Order #74260: the shipment is late, can you tell me where it is? Thanks."
+614,en,refund,"Hi, I returned the dress 9 days ago and I still haven't received my refund. Thanks."
+615,en,refund,"hello, i returned the jacket 13 days ago and i still haven't received my refund."
+616,it,shipping,"Ciao, Ordine #19099: la spedizione è in ritardo, mi sapete dire dov'è? Attendo una risposta."
+617,it,refund,"Buongiorno, Ho restituito le scarpe 7 giorni fa e non ho ancora ricevuto il rimborso."
+618,en,refund,"good morning, i want a refund for order #11807. cany ou help me?"
+619,it,refund,"Buongiorno, Il rimborso per le scarpe è ancora in attesa da 4 giorni. Grazie."
+620,it,account,Non mi arriva il codice di verifica per entrare. Attendo una risposta.
+621,it,account,"Salve, Il mio account è stato bloccato senza spiegazioni."
+622,en,payment,"Hello, I sold the shoes but the payment has not reached my balance yet."
+623,en,refund,"hi, how can i cancel order #67850 and get my money back?"
+624,en,account,"i can't log in to my account, my password doesn't work."
+625,en,payment,"Hello, The transfer of my balance has been stuck for 16 days. Can you ehlp me?"
+626,en,payment,"Hello, The transfer of my balance has been stuck for 15 days."
+627,it,shipping,"Ciao, Il corriere dice che ha consegnato ma io non ho ricevut oniente."
+628,en,refund,i returned the bag 11 days ago and i still haven't received my refund. can you help me?
+629,en,shipping,The tracking for order #40433 has been stuck for 7 days. Waiting for your reply.
+630,it,refund,"Buongiorno, Mi hanno addebitato due volte l'ordine #49576, chiedo il rimborso. Attendo una risposta."
+631,it,payment,"ciao, il trasferimento del mio saldo è fermo da 18 giorni. potete aiutarmi?"
+632,it,account,"salve, non riesco ad accedere al mio account, la password non funziona."
+633,en,payment,The transfer of my balanec has been stuck for 8 days.
+634,en,account,"good morning, my account was blocekd without any explanation. thanks."
+635,en,not_as_described,The listing showed no stain sbut the item (the dress) is damaged. Waiting for your reply.
+636,it,not_as_described,"buongiorno, l'articolo ricevuto (il maglione) è diverso dalle foto dell'annuncio."
+637,it,refund,"Salve, Mi hanno addebitato due volte l'ordine #29521, chiedo il rimborso. Attendo una risposta."
+638,it,shipping,"Salve, Il corriere dice che ha consegnato ma io non ho ricevuto niente. Potete aiutarmi?"
+639,en,shipping,"Hello, My parcel with the sweater has not arrived after 3 days. Waiting for your reply."
+640,en,refund,"Hello, I want a refund for order #89076. Can you help me?"
+641,en,refund,"hi, i was charged twice for order #23399, i am asking for a refund. thanks."
+642,it,shipping,"Buongiorno, Il tracking dell'ordine #34957 è fermo da 16 giorni. Grazie."
+643,en,refund,"Hi, My refund for the jeans has been pending for 4 days. Can you help me?"
+644,it,account,"Non riesco ad accedere al mio account, la password non funziona."
+645,en,not_as_described,The listing showed no stains but the item (the jacket) is damaged. Waiting for your reply.
+646,en,not_as_described,The listing showed no stains but the item (the dress) is damaged. Thanks.
+647,it,not_as_described,"Ciao, L'ordine #49552 non corrisponde alla descrizione: il colore è completamente diverso. Potete aiutarmi?"
+648,it,not_as_described,"Salve, Nell'annuncio non c'erano macchie ma l'articolo (la borsa) è rovinato. Attendo una risposta."
+649,it,refund,"Ciao, Mi hanno addebitato due volte l'ordine #97535, chiedo il rimborso. Grazie."
+650,it,shipping,"Ciao, Sono passati 3 giorni e il pacco con le scarpe non si vede. Potete aiutarmi?"
+651,it,not_as_described,"Buongiorno, Il venditore ha descritto l'articolo (le scarpe) come nuovo ma è usato e consumato. Grazie."
+652,en,shipping,my parcel with the sweater has not arrived after 19 days. thanks.
+653,it,not_as_described,"Salve, Nell'annuncio non c'erano macchie ma l'articolo (la borsa) è rovinato. Grazie."
+654,en,refund,I returned the bag 14 days ago and I still haven't received my refund. Can you help me?
+655,it,refund,"Buongiorno, Come posso annullare l'ordine #34906 e riavere i miei soldi?"
+656,en,account,"hello, i am not receiving the verification code to log in. waiting for your reply."
+657,en,account,I am not receiving the verification code to log in. Thanks.
+658,en,not_as_described,Order #58524 does not match the description: the colour is completely different. Waiting for your reply.
+659,en,payment,"good morning, the transfer of my balance ha sbeen stuck for 15 days. thanks."
+660,en,payment,"Hello, I can't add my card to pay. Waiting for your reply."
+661,it,shipping,Il pacco con la giacca non è arrivato dopo 10 giorni.
+662,it,shipping,Sono passati 11 giorni e il pacco con il maglione non si vede.
+663,it,account,"Salve, Non riesco ad accedere al mio account, la password non funziona. Attendo una risposta."
+664,en,shipping,The tracking for order #28958 has been stuck for 20 days. Can you help me?
+665,en,shipping,"Good morning, My parcel with the jacket has not arrived after 13 day.s Waiting for your reply."
+666,en,refund,"Good morning, How can I cancel order #13847 an dget my money back?"
+667,it,account,"salve, non riesco ad accedere al mio account, la password non funziona. grazie."
+668,it,payment,"Ciao, Il pagamento dell'ordine #15535 è stato rifiutato. Attendo una risposta."
+669,en,not_as_described,"Hi, The listing showed no stains but the item (the jeans) is damaged. Waiting for your reply."
+670,it,not_as_described,"Salve, Il venditore ha descritto l'articolo (la borsa) come nuovo ma è usato e consumato. Attendo una risposta."
+671,it,shipping,"Buongiorno, Ordine #85880: la spedizione è in ritardo, mi sapete dire dov'è? Grazie."
+672,it,not_as_described,"ciao, il venditore ha descritto l'articolo (la borsa) come nuovo ma è usato e consumato. potete aiutarmi?"
+673,en,account,"hi, my account was blocked without any explanation. thanks."
+674,it,not_as_described,"ciao, nell'annuncio non c'erano macchie ma l'articolo (il vestito) è rovinato."
+675,en,account,"Hello, I can't log in to my account, my password doesn't work. Can you help me?"
+676,en,not_as_described,"Hello, The item I received (the jeans) is different from the photos in the listing."
+677,it,refund,"Buongiorno, Voglio un rimborso per l'ordine #98317."
+678,it,shipping,Il tracking dell'ordine #18418 è fermo da 9 giorni.
+679,it,not_as_described,"buongiorno, l'ordine #22712 non corrisponde alla descrizione: il colore è completamente diverso. potete aiutarmi?"
+680,en,refund,My refund for the jeans has been pending for 18 days.
+681,it,refund,"Salve, Il rimborso per i jeans è ancora in attesa da 18 giorni. Potete aiutarmi?"
+682,it,payment,"Salve, Il pagamento dell'ordine #80111 è stato rifiutato."
+683,en,account,"Hi, I am not receiving the verification code to log in. Can you help me?"
+684,it,shipping,"buongiorno, sono passati 4 giorin e il pacco con la borsa non si vede. potete aiutarmi?"
+685,en,refund,"hello, my refund for the jeans has been pending for 7 days. waiting for your reply."
+686,en,not_as_described,"Hello, The item I received (the bag) is different from the photos in the listing. Thanks."
+687,it,refund,"Buongiorno, Il rimborso per le scarpe è ancora in attesa da 13 giorni. Attendo una risposta."
+688,it,payment,"Buongiorno, Il trasferimento del mio saldo è fermo da 5 giorni. Attendo una risposta."
+689,en,shipping,"good morning, the tracking for order #29194 has been stuck for 6 days. can you help me?"
+690,it,account,Il mio account è stato bloccato senza spiegazioni.
+691,en,shipping,"Hello, The tracking for order #92998 has been stuck for 19 days. Can you help me?"
+692,it,refund,"ciao, mi hanno addebitato due volte l'ordine #58589, chiedo il rimborso."
+693,en,account,"Hello, I am not receiving the verification code to log in. Thanks."
+694,it,payment,"Buongiorno, Il trasfermiento del mio saldo è fermo da 12 giorni. Grazie."
+695,it,shipping,"Buongiorno, Ordine #59615: la spedizione è in ritardo, mi sapete dire dov'è? Attendo una risposta."
+696,it,not_as_described,l'articolo ricevuto (la giacca) è diverso dalle foto dell'annuncio.
+697,en,payment,The transfer of my balance has been stuck for 11 days. Waiting for your reply.
+698,en,shipping,My parcel with the bag has not arrived after 18 days. Waiting for your reply.
+699,it,payment,"Buongiorno, Il pagamento dello'rdine #12316 è stato rifiutato."
+700,en,not_as_described,"Hello, I bought the bag in size M but a difefrent size arrived."
+701,en,shipping,"Hi, The tracking for order #38705 has been stuck for 14 days. Waiting for your reply."
+702,en,shipping,"Hello, The tracking for order #39392 has been stuck for 18 days. Waiting for your reply."
+703,en,refund,"Hello, I was charged twice for order #75028, I am asking for a refund."
+704,it,refund,"Salve, Voglio un rimborso per l'ordine #47914. Attendo una risposta."
+705,it,not_as_described,L'odrine #31319 non corrisponde alla descrizione: il colore è completamente diverso. Grazie.
+706,en,account,"good morning, i would like to change the email on my profile. waiting for your reply."
+707,it,payment,"Salve, Non riesco ad aggiungere la carta per pagare."
+708,en,not_as_described,"Hello, The item I received (the jacket) is different from the photos in the listing."
+709,en,account,"hi, i forgot my password and the recovery email never arrives. can you help me?"
+710,it,refund,"Ciao, Ho restituito il vestito 7 giorni fa e non ho ancora ricevuto il rimborso."
+711,it,refund,"Ciao, Come posso annullare l'ordine #93717 e riavere i miei soldi? Attendo una risposta."
+712,it,payment,"Buongiorno, I soldi della vendita (il maglione) non risultano accreditati dopo 16 giorni. Grazie."
+713,en,refund,"Hi, I want a refund for order #27392. Can you help me?"
+714,en,account,"good morning, i forgot my password and the recovery email never arrives. can you help me?"
+715,it,account,"Buongiorno, Il mio account è stato bloccato senza spiegazioni. Potete aiutarmi?"
+716,en,account,"hello, i can't log in to my account, my password doesn't work. waiting for your reply."
+717,it,shipping,"Buongiorno, Il corriere dice che ha consegnato ma io non ho ricevuto niente. Attendo una risposta."
+718,it,shipping,"Buongiorno, Il corriere dice che ha consegnato ma io non ho ricevuto niente. Grazie."
+719,it,payment,"salve, ho venduto la giacca ma il pagamento non è ancora arrivato sul mio saldo. potete aiutarmi?"
+720,en,refund,I returned the jacket 10 days ago and I still haven't received my refund. Thanks.
+721,en,shipping,"Hello, The courier says it was delivered but I received nothing."
+722,en,account,"Hi, I would ilke to change the email on my profile. Waiting for your reply."
+723,en,account,"hello, i can't log in to my account, my password doesn't work. thanks."
+724,en,not_as_described,"Good morning, Order #73373 does not match the description: the colour is completely different. Thanks."
+725,it,shipping,"Salve, Il corriere dice che ha consegnato ma io non ho ricevuto niente. Attendo una risposta."
+726,it,not_as_described,"Salve, L'ordine #71894 non corrisponde alla descrizione: il colore è completamente diverso. Grazie."
+727,it,account,"Buongiorno, Vorrei cambiare l'email del mio profilo. Attendo una risposta."
+728,it,refund,"Ciao, Mi hanno addebitato due volte l'ordine #60678, chiedo il rimborso. Potete aiutarmi?"
+729,en,not_as_described,"Good morning, The sellre described the item (the jacket) as new but it is used and worn."
+730,en,shipping,the courier says it was delivered but i received nothing. thanks.
+731,it,payment,"Buongiorno, Il trasferimento del mio saldo è fermo da 13 giorni. Attendo una risposta."
+732,it,not_as_described,l'ordine #75333 non corrisponde alla descrizione: il colore è completamente diverso. attendo una risposta.
+733,en,account,my account was blocked without any explanation. can you help me?
+734,en,payment,The transfer of my balance has been stuck for 6 days.
+735,it,not_as_described,"Buongiorno, L'articolo ricevuto (le scarpe) è diverso dalle foto dell'annuncio. Potete aiutarmi?"
+736,en,refund,"good morning, my refund for the jacket has been pending for 19 days. waiting for your reply."
+737,en,account,"good morning, i can't log in to my account, my password doesn't work."
+738,en,refund,"hi, how can i cancel order #43980 and get my money back? waiting for your reply."
+739,en,payment,"goo dmorning, the payment for order #21750 was declined."
+740,it,account,"Salve, Ho dimenticato la password e il recupero non mi manda l'email. Attendo una risposta."
+741,en,not_as_described,"Hello, The listing showed no stains but the item (the jacket) is damaged. Waiting for your reply."
+742,en,payment,"hi, the transfer of my balance has been stuck for 17 days. can you help me?"
+743,en,payment,the money from my sale (the jeans) has not been credited after 6 days.
+744,it,refund,Ho restituito la giacca 17 giorni fa e non ho ancora ricevuto il rimborso. Potete aiutarmi?
+745,it,refund,"Ciao, Mi hanno addebitato due volte l'ordine #75444, chiedo il rimborso. Attendo una risposta."
+746,it,not_as_described,"ciao, ho comprato le scarpe in taglia m ma è arrivata una taglia diversa. potete aiutarmi?"
+747,en,account,"Hello, My account was blocked without any explnaation."
+748,it,refund,"Salve, Voglio un rimborso per l'ordine #12052. Potete aiutarmi?"
+749,it,account,"Salve, Non riesco ad accedere al mio account, la password non funziona."
+750,en,account,"Hi, I can't log in to my account, my password doesn't work."
+751,en,not_as_described,"Hello, I bought the dress in size M but a different size arrived. Can you help me?"
+752,it,shipping,"Ciao, Ordine #36365: la spedizione è in ritardo, mi sapete dire dov'è?"
+753,it,payment,"Ciao, Ho venduto il maglione ma il pagamento non è ancora arrivato sul mio saldo. Attendo una risposta."
+754,en,account,"hello, i would like to change the email on my profile. waiting for your reply."
+755,en,refund,How can I cancel order #83822 and get my money back? Waiting for your reply.
+756,en,refund,"good morning, i returned the shoes 6 days ago and i still haven't received my refund. thanks."
+757,en,not_as_described,i bought the sweater in size m ubt a different size arrived. can you help me?
+758,en,payment,"Hello, The money from my sale (the sweater) has not been credited after 18 days. Thanks."
+759,en,payment,the money from my sale (the jeans) has not been credited after 15 days. waiting for your reply.
+760,en,account,my account was blocked without any explanation. waiting for your reply.
+761,en,shipping,The tracking for order #52823 has been stuck for 12 days. Can you help me?
+762,it,payment,i soldi della vendita (le scarpe) non risultano accreditati dopo 5 giorni. grazie.
+763,en,payment,I sold the sweater but the payment has not reached my balance yet. Thanks.
+764,it,refund,"Ciao, Voglio un rimborso per l'ordine #71000. Potete aiutarmi?"
+765,en,account,"Hi, I am not receiving the verification code to log in."
+766,it,not_as_described,"Salve, Il venditore ha descritto l'articolo (il vestito) come nuovo ma è usato e consumato. Attendo una risposta."
+767,it,shipping,il corriere dice che ha consegnato ma io non ho ricevuto niente. potete aiutarmi?
+768,en,refund,"hello, i returned the dress 17 days ago and i stil lhaven't received my refund. thanks."
+769,en,payment,"Hello, The money from my sale (the shoes) has not been credited after 8 days. Waiting for your reply."
+770,en,shipping,"Hi, My parcel with the jacket has not arrived after 18 days. Can you help me?"
+771,en,account,"Good morning, Ic an't log in to my account, my password doesn't work. Waiting for your reply."
+772,en,refund,I want a refund for order #37215. Waiting for your reply.
+773,it,account,"Buongiorno, Vorrei cambiare l'email del mio profilo. Potete aiutarmi?"
+774,it,refund,come posso annullare l'ordine #57139 e riavere i miei soldi?
+775,en,shipping,The courier says it was delivered but I received nothing.
+776,it,shipping,"Buongiorno, Sono passati 18 giorni e il pacco con i jeans non si vede. Grazie."
+777,en,account,"I can't log in to my account, my password doesn't work. Waiting for your reply."
+778,en,payment,I sold the shoes but the payment has not reached my balance yet. Can you help me?
+779,it,refund,"Buongiorno, Voglio un rimborso per l'ordine #42077."
+780,en,account,I am not receiving the verification code to log in.
+781,it,refund,"Salve, Come posso annullare l'ordine #57381 e riavere i miei soldi? Grazie."
+782,it,not_as_described,"Buongiorno, L'articolo ricevuto (la giacca) è diverso dalle foto dell'annuncio. Grazie."
+783,en,shipping,"Good morning, The tracking for order #26547 has been stuck for 4 days. Thanks."
+784,it,account,"buongiorno, non riesco ad accedere al mio account, la password non funziona. potete aiutarmi?"
+785,it,account,Il mio account è stato bloccato senza spiegazioni. Potete aiutarmi?
+786,it,not_as_described,"Buongiorno, L'articolo ricevuto (le scarpe) è diverso dalle foto dell'annuncio."
+787,it,shipping,Il corriere dice che ha consegnato ma io non ho ricevuto niente.
+788,en,not_as_described,"Hi, Order #86568 does not match the description: the colour is completely different. Waiting for your reply."
+789,it,refund,"salve, il rimborso per il maglione è ancora in attsea da 8 giorni."
+790,en,shipping,It has been 19 days and my parcel with the dress is nowhere to be seen. Waiting for your reply.
+791,en,shipping,"hi, order #96057: the shipment is late, can you tell me where it is? waiting for your reply."
+792,en,refund,"I was charged twice for order #53193, I am asking for a refund. Waiting for your reply."
+793,en,account,"good morinng, i am not receiving the verification code to log in. waiting for your reply."
+794,it,payment,Ho venduto il vestito ma il pagamento non è ancora arrivato sul mio saldo. Attendo una risposta.
+795,it,payment,"Salve, Il pagamento dell'ordine #51071 è stato rifiutato."
+796,it,payment,"Ciao, Il pagamento dell'ordine #95951 è stato rifiutato."
+797,en,shipping,"good morning, the courier says it was delivered but i received nothing."
+798,en,account,"Good morning, I forgot my password and the recovery email never arrives. Thanks."
+799,it,account,"Ciao, Il mio account è stato bloccato senza spiegazioni. Grazie."
+800,it,not_as_described,L'ordine #22793 non corrisponde alla descrizione: il colore è completamente diverso. Potete aiutarmi?
+801,it,payment,"buongiorno, i soldi della vendita (i jeans) non risultano accreditati dopo 4 giorni. attendo una risposta."
+802,en,payment,the paymetn for order #29209 was declined.
+803,it,payment,"Buongiorno, Il pagamento dell'ordine #43332 è stato rifiutato."
+804,it,not_as_described,"Ciao, Il venditore ha descritto l'articolo (il maglione) come nuovo ma è usato e consumato."
+805,it,refund,"mi hanno addebitato due volte l'ordine #57943, chiedo il rimborso. attenod una risposta."
+806,it,payment,"salve, ho venduto la borsa ma il pagamento non è ancora arrivato sul mio saldo. attendo una risposta."
+807,en,account,"Hello, My account was blocked without any explanation. Waiting for your reply."
+808,it,payment,"Salve, Non riesco ad aggiungere la carta per pagare. Attendo una risposta."
+809,it,shipping,"Ciao, Sono passati 18 giorni e il pacco con le scarpe non si vede."
+810,en,refund,"Good morning, My refund for the sweater has been pending for 19 days. Thanks."
+811,it,refund,"ciao, voglio un rimborso per l'ordine #34420. grazie."
+812,it,refund,"Ciao, Ho restituito il vestito 3 giorni fa e non ho ancora ricevuto il rimborso."
+813,it,not_as_described,"Buongiorno, L'ordine #83752 non corrisponde alla descrizione: il colore è completamente diverso. Attendo una risposta."
+814,en,payment,The money from my sale (the bag) has not been credited atfer 9 days. Thanks.
+815,it,not_as_described,"Salve, Ho comprato il vestito in taglia M ma è arrivata una taglia diversa. Potete aiutarmi?"
+816,en,refund,"Good morning, I erturned the shoes 4 days ago and I still haven't received my refund. Waiting for your reply."
+817,en,not_as_described,"Hi, The listing showed no stains but the item (the sweater) is damaged."
+818,it,shipping,"Buongiorno, Il tracking dell'ordine #10942 è fermo da 10 giorni. Grazie."
+819,it,refund,Ho restituito i jeans 8 giorni fa e non ho ancora ricevuto il rimborso. Grazie.
+820,en,not_as_described,"Hi, The listing showed no stains but the item (the sweater) is damaged. Thanks."
+821,it,not_as_described,"buongiorno, nell'annuncio non c'erano macchie ma l'articolo (la borsa) è rovinato."
+822,en,account,"hi, i am not receiving the verification code to log in."
+823,en,payment,"Good morning, I sold the sweater but the payment has not reached my balance yet. Thanks."
+824,it,not_as_described,Nell'annuncio non c'erano macchie ma l'articolo (le scarpe) è rovinato. Attendo una risposta.
+825,it,not_as_described,nell'annuncio non c'erano macchie ma l'articolo (la giacca) è rovinato.
+826,it,payment,"buongiorno, i soldi della vendita (la borsa) non risultano accreditati dopo 15 giorni. potete aiutarmi?"
+827,it,shipping,"Salve, Sono passati 20 giorni e il pacco con il vestito non si vede."
+828,it,not_as_described,"Salve, Ho comprato i jeans in taglia M ma è arrivata nua taglia diversa."
+829,it,refund,Come posso annullare l'ordine #21802 e riavere i miei soldi?
+830,it,payment,Il trasferimneto del mio saldo è fermo da 16 giorni.
+831,en,payment,"Hello, The money from my sale (the shoes) has not been credited after 8 days."
+832,it,not_as_described,L'articolo ricevuto (i jeans) è diverso dalle foto dell'annuncio. Grazie.
+833,en,payment,"Good morning, I can't add my card to pay."
+834,it,shipping,"Ciao, Il tracking dell'ordine #47196 è fermo da 5 giorni. Grazie."
+835,it,account,"ciao, non mi arriva il codice di verifica per entrare. potete aiutarmi?"
+836,it,not_as_described,"Salve, Ho comprato il maglione in taglia M ma è arrivata una taglia diversa. Potete aiutarmi?"
+837,en,refund,"Hello, How can I cancel order #53911 and get my money back?"
+838,en,not_as_described,"Hello, The seller described the item (the dress) as new but it is used and worn. Can you help me?"
+839,en,shipping,"Hi, Order #89928: the shipment is late, can you tell me where it is? Waiting for your reply."
+840,it,payment,"Ciao, Il pagamento dell'ordine #25674 è stato rifiutato. Grazie."
+841,en,payment,"Hello, The money from my sale (the shoes) has not been credited fater 9 days. Can you help me?"
+842,en,account,"Good morning, My account was blocked without any explanation. Thanks."
+843,en,payment,"Hi, I can't add my card to pay. Waiting for your reply."
+844,it,not_as_described,"salve, l'ordine #69950 non corrisponde alla descrizione: il colore è completamente diverso."
+845,it,refund,"Buongiorno, Ho restituito le scarpe 4 giorni fa e non ho ancora ricevuto il rimborso. Attendo una risposta."
+846,it,shipping,"salve, il pacco con la giacca non è arrivato dopo 16 giorni."
+847,it,account,"buongiorno, il mio account è stato bloccato senza spiegazioni. grazie."
+848,it,shipping,Il corriere dice che ha consegnato ma io non ho ricevuto niente. Attendo una risposta.
+849,en,account,"Hi, I would like to change the email on my profile. Thanks."
+850,en,shipping,"Good morning, The tracking for order #46046 has been stuck for 7 days."
+851,it,account,"buongiorno, non mi arriva il codice di verifcia per entrare. potete aiutarmi?"
+852,en,payment,The transfer of my balance has been stuck for 12 days. Waiting for your reply.
+853,it,shipping,Il pacco con la borsa non è arrivato dopo 15 giorni. Attendo una risposta.
+854,it,refund,"Buongiorno, Mi hanno addebitato due volte l'ordine #39188, chiedo il rimborso. Grazie."
+855,it,shipping,"Buongiorno, Il tracking dell'ordine #88172 è fermo da 16 giorni."
+856,en,refund,"Hi, I want a refund for order #80371. Waiting for your reply."
+857,it,payment,"Ciao, Ho venduto i jeans ma il pagamento non è ancora arrivato sul mio saldo. Grazie."
+858,it,payment,"Buongiorno, I soldi della vendita (le scarpe) non risultano accreditati dopo 12 giorni."
+859,it,shipping,Sono passati 17 giorni e il pacco con le scarpe non si vede. Attendo una risposta.
+860,en,not_as_described,"Good morning, The listing showed no stains but the item (the bag) is damaged. Thanks."
+861,en,payment,"Hello, The money from my sale (the dress) has not been credited after 5 days."
+862,it,shipping,"Salve, Il tracking dell'ordine #58351 è fermo da 11 giorni. Grazie."
+863,it,refund,"Buongiorno, Il rimborso per il maglione è ancora in attesa da 4 giorni. Grazie."
+864,it,payment,"buongiorno, ho venduto la giacca ma il pagamento non è ancora arrivato sul mio saldo. potete aiutarmi?"
+865,en,refund,"Hello, I returned the dress 16 days ago and I still haven't received my refund. Can you help me?"
+866,it,refund,"Salve, Come posso annullare l'ordine #52291 e riavere i miei soldi? Attendo una risposta."
+867,en,account,"Hello, My account was blocked without an yexplanation. Can you help me?"
+868,it,refund,Come posso annullare l'ordine #84991 e riavere i miei soldi? Grazie.
+869,en,payment,I can't add my card to pay. Waiting for your reply.
+870,en,account,"Hello, I am not receiving the verification code to log in. Can you help me?"
+871,it,shipping,Sono passati 10 giorni e il pacco con i jeans non si vede.
+872,en,payment,"Hello, The money from my sale (the shoes) has not been credited after 7 days. Thanks."
+873,en,shipping,"Hello, Order #22999: the shipment is late, can you tell me where it is? Can you help me?"
+874,it,account,Ho dimenticato la password e il recupero non mi manda l'email. Grazie.
+875,en,not_as_described,"Hi, The item I received (the sweater) is different from the photos in the listing. Can you help me?"
+876,en,account,"Hello, I am not receiving the verification code to log in."
+877,it,shipping,"salve, il tracking dell'ordine #58393 è fermo da 4 giorni."
+878,it,shipping,"Buongiorno, Ordine #98259: la spedizione è in ritardo, mi sapete dire dov'è? Grazie."
+879,it,refund,"Salve, Mi hanno addebitato due volte l'ordine #31292, chiedo il rimborso."
+880,it,shipping,"Ciao, Sono passati 11 giorni e il paccoc on le scarpe non si vede. Potete aiutarmi?"
+881,en,payment,"Good morning, The money from my sale (the jacket) has not been credited after 5 days."
+882,en,shipping,"Hi, It has been 17 days and my parcel with the dress is nowhere to be seen. Can you help me?"
+883,en,shipping,"Good morning, Order #76698: the shipment is late, can you tell me where it is?"
+884,it,not_as_described,nell'annuncio non c'erano macchie ma l'articolo (il vestito) è rovinato. grazie.
+885,it,shipping,"Ciao, Il pacco con la giacca non è arrivato dopo 16 giorni."
+886,en,shipping,"Hello, The coruier says it was delivered but I received nothing. Thanks."
+887,it,shipping,"Buongiorno, Sono passati 12 giorni e il pacco con il vestito non si vede. Grazie."
+888,en,shipping,"Good morning, It has been 19 days and my parcel with the dress is nowhere to be seen. Thanks."
+889,en,not_as_described,"Hi, The item I received (the jeans) is different from the photos in the listing."
+890,it,payment,"Salve, Il pagamento dell'ordine #24526 è stato rifiutato. Potete aiutarmi?"
+891,it,account,"Buongiorno, Non riesco ad accedere al mio account, la password non funziona. Attendo una risposta."
+892,it,payment,"Salve, I soldi della vendita( la borsa) non risultano accreditati dopo 9 giorni. Grazie."
+893,it,shipping,"Buongiorno, Sono passati 16 giorni e il pacco con la giacca non si vede. Grazie."
+894,it,shipping,"Ciao, Il tracking dell'ordine #55830 è fermo da 17 giorni. Potete aiutarmi?"
+895,en,account,"Hi, I forgot my password and the recovery email never arrives. Thanks."
+896,it,shipping,il tracking dell'ordine #46434 è fermo da 15 giorni. attendo una risposta.
+897,en,not_as_described,"Good morning, I bought the dress in size M but a different size arrived. Waiting fo ryour reply."
+898,it,payment,Ho venduto le scarpe ma il pagamento non è ancora arrivato sul mio saldo. Potete aiutarmi?
+899,it,payment,Ho venduto i jeans ma il pagamento non è nacora arrivato sul mio saldo. Grazie.
+900,it,shipping,"buongiorno, ordine #43065: la spedizione è in ritardo, mi sapete dire dov'è?"
+901,it,refund,il rimborso per le scapre è ancora in attesa da 7 giorni. grazie.
+902,en,not_as_described,"Good morning, Order #31802 does not match the description: the colour is completely different. Can you help me?"
+903,it,not_as_described,"Ciao, L'articolo ricevuto (la borsa) è diverso dalle foto dell'annuncio."
+904,en,shipping,"Hi, My parcel with the jacket has not arrived after 9 days. Can you help me?"
+905,it,refund,"Salve, Ho restituito le scarpe 13 giorni fa e non ho ancora ricevuto il rimborso."
+906,it,account,Vorrei cambiare l'email del mio profilo. Grazie.
+907,it,refund,"Buongiorno, Come posso annullare l'ordine #79226 e riavere i miei soldi? Potete aiutarmi?"
+908,it,payment,"salve, il trasfreimento del mio saldo è fermo da 10 giorni. potete aiutarmi?"
+909,it,not_as_described,L'articolo ricevuto (la borsa) è diverso dalle foto dell'annuncio. Attendo una risposat.
+910,en,shipping,My parcel with the sweater has not arrived after 5 days.
