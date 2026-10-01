@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support chat · demo</title>
+  <style>
+    :root {
+      --bg: #f4f5f8; --card: #ffffff; --text: #1c2030; --muted: #667085; --border: #dfe3ec;
+      --accent: #3b5bdb; --accent-text: #ffffff; --mine: #3b5bdb; --mine-text: #ffffff; --theirs: #eceff5;
+      --ok: #2f9e44; --warn: #e8a317; --bad: #d9480f;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #12141b; --card: #1b1e29; --text: #e8eaf2; --muted: #98a0b5; --border: #2c3142;
+        --accent: #6b8afd; --accent-text: #10131c; --mine: #4a68e8; --mine-text: #ffffff; --theirs: #262b3b;
+      }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    .chat { max-width: 640px; height: 100dvh; margin: 0 auto; display: flex; flex-direction: column; background: var(--card);
+            border-left: 1px solid var(--border); border-right: 1px solid var(--border); }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 16px; border-bottom: 1px solid var(--border); }
+    h1 { margin: 0; font-size: 18px; }
+    .sub { margin: 2px 0 0; font-size: 13px; color: var(--muted); }
+    .status { font-size: 13px; color: var(--muted); display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+    .status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--warn); }
+    .status[data-state="online"]::before { background: var(--ok); }
+    .status[data-state="offline"]::before { background: var(--bad); }
+    #messages { flex: 1; overflow-y: auto; list-style: none; margin: 0; padding: 16px; display: flex; flex-direction: column; gap: 8px; }
+    .msg { max-width: 80%; padding: 8px 12px; border-radius: 14px; overflow-wrap: anywhere; }
+    .msg p { margin: 0; white-space: pre-wrap; }
+    .msg .who { display: block; font-size: 12px; color: var(--muted); margin-bottom: 2px; }
+    .msg.mine { align-self: flex-end; background: var(--mine); color: var(--mine-text); border-bottom-right-radius: 4px; }
+    .msg.theirs { align-self: flex-start; background: var(--theirs); border-bottom-left-radius: 4px; }
+    .hint { margin: 0; padding: 0 16px 8px; font-size: 13px; color: var(--muted); }
+    form { display: flex; gap: 8px; padding: 12px 16px; border-top: 1px solid var(--border); }
+    input[type="text"] { flex: 1; min-width: 0; padding: 10px 12px; font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: 10px; }
+    input[type="text"]:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    button { font: inherit; cursor: pointer; }
+    button.primary { padding: 10px 18px; border: 0; border-radius: 10px; background: var(--accent); color: var(--accent-text); font-weight: 600; }
+    button.primary:disabled { opacity: 0.5; cursor: not-allowed; }
+    footer { padding: 10px 16px 14px; font-size: 12px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: center; }
+    footer a, footer button.link { color: var(--accent); background: none; border: 0; padding: 0; text-decoration: underline; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <main class="chat">
+    <header>
+      <div>
+        <h1>Support chat</h1>
+        <p class="sub">Write to us in Italian or English</p>
+      </div>
+      <span id="status" class="status" data-state="connecting">Connecting…</span>
+    </header>
+
+    <ol id="messages" aria-live="polite"></ol>
+    <p id="hint" class="hint" hidden>We got your message. An agent will reply here shortly.</p>
+
+    <form id="form">
+      <input id="input" type="text" autocomplete="off" maxlength="1000" placeholder="Describe your problem…" aria-label="Your message" required>
+      <button id="send" class="primary" type="submit" disabled>Send</button>
+    </form>
+
+    <footer>
+      <span>Independent demo project, not affiliated with any company.</span>
+      <a href="/agent" target="_blank" rel="noopener">Open the agent console</a>
+      <button id="new" class="link" type="button">Start a new conversation</button>
+    </footer>
+  </main>
+
+  <script>
+    const messagesEl = document.getElementById("messages");
+    const hintEl = document.getElementById("hint");
+    const form = document.getElementById("form");
+    const input = document.getElementById("input");
+    const sendBtn = document.getElementById("send");
+    const statusEl = document.getElementById("status");
+
+    const newId = () => "t" + Math.random().toString(36).slice(2, 8);
+
+    // Un id per scheda del browser: sopravvive al refresh, ma due schede sono due clienti diversi.
+    function loadTicketId() {
+      try {
+        let id = sessionStorage.getItem("ticketId");
+        if (!id) { id = newId(); sessionStorage.setItem("ticketId", id); }
+        return id;
+      } catch (_) {
+        return newId(); // storage bloccato: la chat funziona, ma dopo un refresh riparte da zero
+      }
+    }
+    function saveTicketId(id) {
+      try { sessionStorage.setItem("ticketId", id); } catch (_) { /* ignorato */ }
+    }
+
+    let ticketId = loadTicketId();
+    let ws = null;
+    let attempt = 0;
+    let reconnectTimer = null;
+    let lastFrom = null;
+
+    function setStatus(state, label) {
+      statusEl.dataset.state = state;
+      statusEl.textContent = label;
+    }
+
+    function updateHint() {
+      hintEl.hidden = lastFrom !== "customer";
+    }
+
+    function addMessage(message) {
+      const item = document.createElement("li");
+      item.className = "msg " + (message.from === "customer" ? "mine" : "theirs");
+      if (message.from !== "customer") {
+        const who = document.createElement("span");
+        who.className = "who";
+        who.textContent = "Support";
+        item.append(who);
+      }
+      const text = document.createElement("p");
+      text.textContent = message.text; // textContent, mai innerHTML: il testo degli utenti non è fidato
+      item.append(text);
+      messagesEl.append(item);
+      messagesEl.scrollTop = messagesEl.scrollHeight;
+      lastFrom = message.from;
+      updateHint();
+    }
+
+    async function loadHistory(id) {
+      messagesEl.replaceChildren();
+      lastFrom = null;
+      updateHint();
+      try {
+        const response = await fetch("/api/tickets/" + encodeURIComponent(id));
+        if (response.ok) {
+          const data = await response.json();
+          if (id === ticketId) data.messages.forEach(addMessage);
+        }
+      } catch (_) { /* server non raggiungibile: ci riproverà la riconnessione */ }
+    }
+
+    async function connect() {
+      const id = ticketId;
+      setStatus("connecting", attempt === 0 ? "Connecting…" : "Reconnecting…");
+      await loadHistory(id);
+      if (id !== ticketId) return; // nel frattempo è iniziata un'altra conversazione
+
+      const scheme = location.protocol === "https:" ? "wss" : "ws";
+      const socket = new WebSocket(`${scheme}://${location.host}/ws/${encodeURIComponent(id)}?role=customer`);
+      ws = socket;
+
+      socket.onopen = () => {
+        attempt = 0;
+        setStatus("online", "Online");
+        sendBtn.disabled = false;
+      };
+      socket.onmessage = (event) => {
+        const data = JSON.parse(event.data);
+        if (data.type === "message") addMessage(data);
+      };
+      socket.onclose = () => {
+        if (ws !== socket) return; // chiusura voluta (nuova conversazione)
+        sendBtn.disabled = true;
+        setStatus("offline", "Offline");
+        const delay = Math.min(1000 * 2 ** attempt, 10000); // 1s, 2s, 4s... al massimo 10s
+        attempt += 1;
+        reconnectTimer = setTimeout(connect, delay);
+      };
+    }
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const text = input.value.trim();
+      if (!text || !ws || ws.readyState !== WebSocket.OPEN) return;
+      ws.send(text); // non lo mostriamo subito: compare quando il server lo rimanda a tutti
+      input.value = "";
+    });
+
+    document.getElementById("new").addEventListener("click", () => {
+      clearTimeout(reconnectTimer);
+      const old = ws;
+      ws = null;
+      if (old) old.close();
+      ticketId = newId();
+      saveTicketId(ticketId);
+      attempt = 0;
+      sendBtn.disabled = true;
+      connect();
+    });
+
+    connect();
+  </script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agent console · demo</title>
+  <style>
+    :root {
+      --bg: #f4f5f8; --card: #ffffff; --text: #1c2030; --muted: #667085; --border: #dfe3ec;
+      --accent: #3b5bdb; --accent-text: #ffffff; --soft: #eceff5; --selected: #e7ecff;
+      --ok: #2f9e44; --warn: #e8a317; --bad: #d9480f;
+      --high-bg: #ffe3d6; --high-text: #a13a08; --med-bg: #fff1c9; --med-text: #7a5600;
+      --low-bg: #dff3e4; --low-text: #1f6b32; --done-bg: #eceff5; --done-text: #667085;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #12141b; --card: #1b1e29; --text: #e8eaf2; --muted: #98a0b5; --border: #2c3142;
+        --accent: #6b8afd; --accent-text: #10131c; --soft: #262b3b; --selected: #26305a;
+        --high-bg: #4a2412; --high-text: #ffb089; --med-bg: #43360f; --med-text: #f3d37a;
+        --low-bg: #16381f; --low-text: #8fdaa2; --done-bg: #262b3b; --done-text: #98a0b5;
+      }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    .top { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: var(--card); border-bottom: 1px solid var(--border); }
+    h1 { margin: 0; font-size: 18px; }
+    h2 { margin: 0; font-size: 15px; }
+    .status { font-size: 13px; color: var(--muted); display: inline-flex; align-items: center; gap: 6px; }
+    .status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--warn); }
+    .status[data-state="online"]::before { background: var(--ok); }
+    .status[data-state="offline"]::before { background: var(--bad); }
+    .layout { display: grid; grid-template-columns: 340px 1fr; height: calc(100dvh - 53px); }
+    aside { background: var(--card); border-right: 1px solid var(--border); overflow-y: auto; }
+    aside h2 { padding: 14px 16px 8px; }
+    #queue { list-style: none; margin: 0; padding: 0; }
+    .ticket { display: block; width: 100%; text-align: left; font: inherit; color: inherit; background: none; border: 0; border-top: 1px solid var(--border); padding: 10px 16px; cursor: pointer; }
+    .ticket:hover { background: var(--soft); }
+    .ticket[aria-current="true"] { background: var(--selected); }
+    .ticket:focus-visible, button:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+    .row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    .id { font-weight: 600; }
+    .meta { font-size: 13px; color: var(--muted); }
+    .preview { font-size: 13px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px; }
+    .badge { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+    .badge.high { background: var(--high-bg); color: var(--high-text); }
+    .badge.medium { background: var(--med-bg); color: var(--med-text); }
+    .badge.low { background: var(--low-bg); color: var(--low-text); }
+    .badge.done { background: var(--done-bg); color: var(--done-text); }
+    .empty, #placeholder { color: var(--muted); padding: 16px; }
+    #detail { display: flex; flex-direction: column; min-width: 0; min-height: 0; }
+    #detail[hidden], #placeholder[hidden] { display: none; }
+    .detail-head { display: flex; align-items: center; gap: 10px; padding: 12px 16px; background: var(--card); border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+    #messages { flex: 1; overflow-y: auto; list-style: none; margin: 0; padding: 16px; display: flex; flex-direction: column; gap: 8px; }
+    .msg { max-width: 75%; padding: 8px 12px; border-radius: 14px; overflow-wrap: anywhere; background: var(--card); border: 1px solid var(--border); border-bottom-left-radius: 4px; align-self: flex-start; }
+    .msg p { margin: 0; white-space: pre-wrap; }
+    .msg .who { display: block; font-size: 12px; color: var(--muted); margin-bottom: 2px; }
+    .msg.agent { align-self: flex-end; background: var(--accent); color: var(--accent-text); border-color: transparent; border-bottom-left-radius: 14px; border-bottom-right-radius: 4px; }
+    .msg.agent .who { color: inherit; opacity: 0.75; }
+    .suggestion { margin: 0 16px 12px; padding: 12px; border: 1px dashed var(--accent); border-radius: 10px; background: var(--card); }
+    .suggestion .label { font-size: 12px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: center; }
+    .suggestion p { margin: 6px 0 10px; }
+    .suggestion.human { border-color: var(--warn); }
+    .chip { font-size: 12px; font-weight: 500; text-transform: none; letter-spacing: 0; padding: 1px 8px; border-radius: 999px; background: var(--soft); color: var(--text); }
+    form { display: flex; gap: 8px; padding: 12px 16px; background: var(--card); border-top: 1px solid var(--border); }
+    textarea { flex: 1; min-width: 0; resize: none; padding: 10px 12px; font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: 10px; }
+    button { font: inherit; cursor: pointer; }
+    button.primary { padding: 8px 16px; border: 0; border-radius: 10px; background: var(--accent); color: var(--accent-text); font-weight: 600; }
+    button.secondary { padding: 6px 12px; border: 1px solid var(--accent); border-radius: 8px; background: none; color: var(--accent); font-weight: 600; }
+    button:disabled { opacity: 0.5; cursor: not-allowed; }
+    @media (max-width: 720px) {
+      .layout { grid-template-columns: 1fr; grid-template-rows: 38% 1fr; }
+      aside { border-right: 0; border-bottom: 1px solid var(--border); }
+    }
+  </style>
+</head>
+<body>
+  <div class="top">
+    <h1>Agent console</h1>
+    <span id="status" class="status" data-state="connecting">Connecting…</span>
+  </div>
+
+  <div class="layout">
+    <aside>
+      <h2>Queue <span id="count" class="meta"></span></h2>
+      <ul id="queue"></ul>
+      <p id="empty" class="empty">No tickets yet. Open the <a href="/" target="_blank" rel="noopener">customer page</a> and send a message.</p>
+    </aside>
+
+    <p id="placeholder">Select a ticket from the queue.</p>
+
+    <section id="detail" hidden>
+      <div class="detail-head">
+        <h2 id="title"></h2>
+        <span id="state"></span>
+      </div>
+      <ol id="messages" aria-live="polite"></ol>
+
+      <div id="suggestion" class="suggestion" hidden>
+        <div class="label"><span id="suggestion-title">Suggested reply</span><span id="chips"></span></div>
+        <p id="suggestion-text"></p>
+        <button id="use" class="secondary" type="button">Use this reply</button>
+      </div>
+
+      <form id="form">
+        <textarea id="reply" rows="2" placeholder="Write a reply… (Enter to send, Shift+Enter for a new line)" aria-label="Your reply" required></textarea>
+        <button id="send" class="primary" type="submit" disabled>Send</button>
+      </form>
+    </section>
+  </div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const queueEl = $("queue"), countEl = $("count"), emptyEl = $("empty"), statusEl = $("status");
+    const detailEl = $("detail"), placeholderEl = $("placeholder"), titleEl = $("title"), stateEl = $("state");
+    const messagesEl = $("messages"), suggestionEl = $("suggestion"), suggestionText = $("suggestion-text");
+    const suggestionTitle = $("suggestion-title"), chipsEl = $("chips"), useBtn = $("use");
+    const form = $("form"), replyEl = $("reply"), sendBtn = $("send");
+
+    const CATEGORY = { shipping: "Shipping", refund: "Refund", not_as_described: "Not as described", account: "Account", payment: "Payment" };
+
+    let queue = [];
+    let selected = null;
+    let ticketWs = null;
+    let ticketAttempt = 0;
+    let ticketTimer = null;
+    let currentSuggestion = null;
+
+    const el = (tag, className, text) => {
+      const node = document.createElement(tag);
+      if (className) node.className = className;
+      if (text !== undefined) node.textContent = text; // sempre textContent: i messaggi dei clienti non sono fidati
+      return node;
+    };
+
+    function waitLabel(since) {
+      const seconds = Math.max(0, Date.now() / 1000 - since);
+      if (seconds < 60) return "waiting < 1 min";
+      const minutes = Math.floor(seconds / 60);
+      if (minutes < 60) return `waiting ${minutes} min`;
+      return `waiting ${Math.floor(minutes / 60)} h ${minutes % 60} min`;
+    }
+
+    function badge(ticket) {
+      if (ticket.status !== "waiting") return el("span", "badge done", "answered");
+      const priority = ticket.triage ? ticket.triage.priority : "medium";
+      return el("span", "badge " + priority, priority);
+    }
+
+    function renderQueue() {
+      queueEl.replaceChildren();
+      emptyEl.hidden = queue.length > 0;
+      const waiting = queue.filter((t) => t.status === "waiting").length;
+      countEl.textContent = queue.length ? `· ${waiting} waiting` : "";
+
+      for (const ticket of queue) {
+        const item = el("li");
+        const button = el("button", "ticket");
+        button.type = "button";
+        if (ticket.id === selected) button.setAttribute("aria-current", "true");
+
+        const top = el("div", "row");
+        top.append(el("span", "id", "#" + ticket.id), badge(ticket));
+
+        // Se il modello non è sicuro, la categoria sarebbe solo la sua ipotesi più debole: non la mostriamo.
+        const category = !ticket.triage ? "New" : ticket.triage.needs_human ? "Needs a person" : CATEGORY[ticket.triage.category];
+        const waitText = ticket.status === "waiting" ? " · " + waitLabel(ticket.waiting_since) : "";
+        const meta = el("div", "meta", category + waitText);
+
+        button.append(top, meta, el("div", "preview", ticket.last_message));
+        button.addEventListener("click", () => selectTicket(ticket.id));
+        item.append(button);
+        queueEl.append(item);
+      }
+      updateDetail();
+    }
+
+    function addMessage(message) {
+      const item = el("li", "msg " + (message.from === "agent" ? "agent" : "customer"));
+      item.append(el("span", "who", message.from === "agent" ? "You" : "Customer"), el("p", "", message.text));
+      messagesEl.append(item);
+      messagesEl.scrollTop = messagesEl.scrollHeight;
+    }
+
+    function showSuggestion(triage) {
+      currentSuggestion = triage;
+      if (!triage) { suggestionEl.hidden = true; return; }
+      suggestionEl.hidden = false;
+      suggestionEl.classList.toggle("human", triage.needs_human);
+      const name = CATEGORY[triage.category] || triage.category;
+      chipsEl.replaceChildren(
+        el("span", "chip", triage.needs_human ? "best guess: " + name : name),
+        el("span", "chip", triage.language.toUpperCase()),
+        el("span", "chip", "priority: " + triage.priority),
+      );
+      const score = el("span", "chip", "model score " + Math.round(triage.confidence * 100) + "%");
+      score.title = "Raw model score, not a calibrated probability";
+      chipsEl.append(score);
+      if (triage.needs_human) {
+        suggestionTitle.textContent = "No confident suggestion: needs a person";
+        suggestionText.textContent = "The model is not sure about this message, so it suggests nothing. Please read it and answer yourself.";
+        useBtn.hidden = true;
+      } else {
+        suggestionTitle.textContent = "Suggested reply";
+        suggestionText.textContent = triage.suggestion;
+        useBtn.hidden = false;
+      }
+    }
+
+    function updateDetail() {
+      const ticket = queue.find((t) => t.id === selected);
+      if (!ticket) return;
+      stateEl.replaceChildren(badge(ticket));
+      // Il suggerimento serve finché il cliente aspetta; dopo la risposta lo nascondiamo.
+      showSuggestion(ticket.status === "waiting" ? ticket.triage : null);
+    }
+
+    async function loadHistory(id) {
+      messagesEl.replaceChildren();
+      try {
+        const response = await fetch("/api/tickets/" + encodeURIComponent(id));
+        if (response.ok && id === selected) (await response.json()).messages.forEach(addMessage);
+      } catch (_) { /* ci riprova la riconnessione */ }
+    }
+
+    async function openTicketSocket(id) {
+      await loadHistory(id);
+      if (id !== selected) return;
+      const scheme = location.protocol === "https:" ? "wss" : "ws";
+      const socket = new WebSocket(`${scheme}://${location.host}/ws/${encodeURIComponent(id)}?role=agent`);
+      ticketWs = socket;
+      socket.onopen = () => { ticketAttempt = 0; sendBtn.disabled = false; };
+      socket.onmessage = (event) => {
+        const data = JSON.parse(event.data);
+        if (data.type === "message") addMessage(data);
+        else if (data.type === "suggestion") showSuggestion(data);
+      };
+      socket.onclose = () => {
+        if (ticketWs !== socket) return;
+        sendBtn.disabled = true;
+        const delay = Math.min(1000 * 2 ** ticketAttempt, 10000);
+        ticketAttempt += 1;
+        ticketTimer = setTimeout(() => openTicketSocket(id), delay);
+      };
+    }
+
+    function selectTicket(id) {
+      if (id === selected) return;
+      clearTimeout(ticketTimer);
+      const old = ticketWs;
+      ticketWs = null;
+      if (old) old.close();
+      selected = id;
+      ticketAttempt = 0;
+      sendBtn.disabled = true;
+      replyEl.value = "";
+      placeholderEl.hidden = true;
+      detailEl.hidden = false;
+      titleEl.textContent = "Ticket #" + id;
+      showSuggestion(null);
+      renderQueue();
+      openTicketSocket(id);
+    }
+
+    useBtn.addEventListener("click", () => {
+      if (currentSuggestion && currentSuggestion.suggestion) {
+        replyEl.value = currentSuggestion.suggestion;
+        replyEl.focus();
+      }
+    });
+
+    function sendReply() {
+      const text = replyEl.value.trim();
+      if (!text || !ticketWs || ticketWs.readyState !== WebSocket.OPEN) return;
+      ticketWs.send(text);
+      replyEl.value = "";
+    }
+    form.addEventListener("submit", (event) => { event.preventDefault(); sendReply(); });
+    replyEl.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" && !event.shiftKey) { event.preventDefault(); sendReply(); }
+    });
+
+    // Console collegata alla "lobby": riceve la coda aggiornata a ogni messaggio.
+    let lobbyAttempt = 0;
+    function connectLobby() {
+      const scheme = location.protocol === "https:" ? "wss" : "ws";
+      const socket = new WebSocket(`${scheme}://${location.host}/ws-agents`);
+      socket.onopen = () => { lobbyAttempt = 0; statusEl.dataset.state = "online"; statusEl.textContent = "Online"; };
+      socket.onmessage = (event) => {
+        const data = JSON.parse(event.data);
+        if (data.type === "queue") { queue = data.tickets; renderQueue(); }
+      };
+      socket.onclose = () => {
+        statusEl.dataset.state = "offline";
+        statusEl.textContent = "Offline, reconnecting…";
+        setTimeout(connectLobby, Math.min(1000 * 2 ** lobbyAttempt++, 10000));
+      };
+    }
+
+    setInterval(renderQueue, 15000); // aggiorna le etichette "waiting X min"
+    connectLobby();
+  </script>
+</body>
+</html>
