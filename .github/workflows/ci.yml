@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: requirements*.txt
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+      - name: Train the classifier  # il modello non è nel repository: lo costruiamo qui
+        run: python -m scripts.train
+      - name: Run tests
+        run: python -m pytest -v
+
+  docker:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - name: Build the image
+        run: docker build -t live-support-demo .
+      - name: Start the container and check it answers
+        run: |
+          docker run -d --name demo -p 8000:8000 live-support-demo
+          for i in $(seq 1 20); do
+            if curl -fs http://localhost:8000/health; then
+              curl -fs http://localhost:8000/ | grep -q "Support chat"
+              curl -fs http://localhost:8000/agent | grep -q "Agent console"
+              echo "container OK"
+              exit 0
+            fi
+            sleep 1
+          done
+          docker logs demo
+          exit 1
