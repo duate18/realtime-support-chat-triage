@@ -34,6 +34,7 @@
     .msg.mine { align-self: flex-end; background: var(--mine); color: var(--mine-text); border-bottom-right-radius: 4px; }
     .msg.theirs { align-self: flex-start; background: var(--theirs); border-bottom-left-radius: 4px; }
     .hint { margin: 0; padding: 0 16px 8px; font-size: 13px; color: var(--muted); }
+    .hint.error { color: var(--bad); }
     form { display: flex; gap: 8px; padding: 12px 16px; border-top: 1px solid var(--border); }
     input[type="text"] { flex: 1; min-width: 0; padding: 10px 12px; font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: 10px; }
     input[type="text"]:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
@@ -56,6 +57,7 @@
 
     <ol id="messages" aria-live="polite"></ol>
     <p id="hint" class="hint" hidden>We got your message. An agent will reply here shortly.</p>
+    <p id="error" class="hint error" role="alert" hidden></p>
 
     <form id="form">
       <input id="input" type="text" autocomplete="off" maxlength="1000" placeholder="Describe your problem…" aria-label="Your message" required>
@@ -72,6 +74,7 @@
   <script>
     const messagesEl = document.getElementById("messages");
     const hintEl = document.getElementById("hint");
+    const errorEl = document.getElementById("error");
     const form = document.getElementById("form");
     const input = document.getElementById("input");
     const sendBtn = document.getElementById("send");
@@ -106,6 +109,14 @@
 
     function updateHint() {
       hintEl.hidden = lastFrom !== "customer";
+    }
+
+    let errorTimer = null;
+    function showError(text) {
+      errorEl.textContent = text;
+      errorEl.hidden = false;
+      clearTimeout(errorTimer);
+      errorTimer = setTimeout(() => { errorEl.hidden = true; }, 5000);
     }
 
     function addMessage(message) {
@@ -157,6 +168,7 @@
       socket.onmessage = (event) => {
         const data = JSON.parse(event.data);
         if (data.type === "message") addMessage(data);
+        else if (data.type === "error") showError(data.detail); // messaggio rifiutato dal server
       };
       socket.onclose = () => {
         if (ws !== socket) return; // chiusura voluta (nuova conversazione)

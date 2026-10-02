@@ -10,7 +10,8 @@ class Ticket:
     id: str
     created_at: float
     messages: list[dict] = field(default_factory=list)
-    triage: dict | None = None  # ultimo smistamento di un messaggio del cliente
+    triage: dict | None = None  # smistamento dell'ultimo messaggio del cliente (serve per il suggerimento)
+    priority: str | None = None  # la più alta tra i messaggi del cliente ancora senza risposta
     waiting_since: float | None = None  # da quando il cliente aspetta risposta (None = nessuna attesa)
 
     def summary(self) -> dict:
@@ -18,6 +19,7 @@ class Ticket:
             "id": self.id,
             "status": "waiting" if self.waiting_since is not None else "answered",
             "waiting_since": self.waiting_since,
+            "priority": self.priority,
             "last_message": self.messages[-1]["text"] if self.messages else "",
             "triage": self.triage,
         }
@@ -39,11 +41,20 @@ class TicketStore:
             if ticket.waiting_since is None:
                 ticket.waiting_since = now  # l'attesa parte dal primo messaggio senza risposta
         else:
-            ticket.waiting_since = None  # l'operatore ha risposto
+            ticket.waiting_since = None  # l'operatore ha risposto...
+            ticket.priority = None  # ...quindi l'attesa finisce e la priorità riparte da zero
         return ticket
 
     def set_triage(self, ticket_id: str, triage: dict) -> None:
-        self.tickets[ticket_id].triage = triage
+        ticket = self.tickets[ticket_id]
+        ticket.triage = triage
+        # Il cliente sta ancora aspettando: tengo la priorità più alta vista finora, così un messaggio
+        # successivo e più calmo ("ci siete?") non fa scendere un ticket urgente. Se l'operatore ha già
+        # risposto nel frattempo, questo smistamento è vecchio e non conta per la priorità.
+        if ticket.waiting_since is not None:
+            new = triage["priority"]
+            if ticket.priority is None or PRIORITY_ORDER[new] < PRIORITY_ORDER[ticket.priority]:
+                ticket.priority = new
 
     def queue(self) -> list[dict]:
         """Prima i ticket in attesa (priorità più alta, poi chi aspetta da più tempo), poi quelli già risposti."""
@@ -51,7 +62,7 @@ class TicketStore:
         def sort_key(ticket: Ticket) -> tuple:
             if ticket.waiting_since is None:
                 return (1, 0, -ticket.messages[-1]["at"])  # già risposti: i più recenti per primi
-            priority = PRIORITY_ORDER[ticket.triage["priority"]] if ticket.triage else PRIORITY_ORDER["medium"]
+            priority = PRIORITY_ORDER[ticket.priority or "medium"]  # senza smistamento: media
             return (0, priority, ticket.waiting_since)
 
         return [ticket.summary() for ticket in sorted(self.tickets.values(), key=sort_key)]

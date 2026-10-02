@@ -105,6 +105,66 @@ def test_summary_has_what_the_console_needs():
         "id": "a",
         "status": "waiting",
         "waiting_since": 1000.0,
+        "priority": "low",
         "last_message": "Il mio pacco non è arrivato",
         "triage": {"priority": "low", "category": "shipping"},
     }]
+
+
+def test_priority_keeps_the_highest_while_the_customer_waits():
+    store, clock = make_store()
+    store.add_message("a", "customer", "Mi hanno addebitato due volte!")
+    store.set_triage("a", {"priority": "high"})
+    clock.advance(5)
+    store.add_message("a", "customer", "Ci siete?")
+    store.set_triage("a", {"priority": "medium"})  # il seguito è più calmo, ma il ticket resta urgente
+
+    ticket = store.get("a")
+    assert ticket.priority == "high"
+    assert ticket.triage == {"priority": "medium"}  # il suggerimento riguarda l'ultimo messaggio
+
+
+def test_priority_can_rise_with_a_later_message():
+    store, _ = make_store()
+    store.add_message("a", "customer", "Il mio pacco non è arrivato")
+    store.set_triage("a", {"priority": "low"})
+    store.add_message("a", "customer", "Mi hanno truffato")
+    store.set_triage("a", {"priority": "high"})
+
+    assert store.get("a").priority == "high"
+
+
+def test_agent_reply_resets_the_priority():
+    store, clock = make_store()
+    store.add_message("a", "customer", "Urgente!")
+    store.set_triage("a", {"priority": "high"})
+    store.add_message("a", "agent", "Ci penso io")
+    assert store.get("a").priority is None
+
+    clock.advance(10)
+    store.add_message("a", "customer", "Un'altra domanda, nessuna fretta")
+    store.set_triage("a", {"priority": "low"})
+    assert store.get("a").priority == "low"  # non si porta dietro l'urgenza del giro precedente
+
+
+def test_a_late_triage_does_not_change_the_priority_of_an_answered_ticket():
+    store, _ = make_store()
+    store.add_message("a", "customer", "Urgente!")
+    store.add_message("a", "agent", "Risposto prima che lo smistamento finisse")
+    store.set_triage("a", {"priority": "high"})  # arriva in ritardo
+
+    assert store.get("a").priority is None
+    assert store.queue()[0]["status"] == "answered"
+
+
+def test_queue_orders_by_the_highest_priority_not_the_latest():
+    store, clock = make_store()
+    store.add_message("urgent-then-calm", "customer", "Urgente!")
+    store.set_triage("urgent-then-calm", {"priority": "high"})
+    clock.advance(10)
+    store.add_message("urgent-then-calm", "customer", "Ci siete?")
+    store.set_triage("urgent-then-calm", {"priority": "low"})
+    store.add_message("medium", "customer", "Una domanda")
+    store.set_triage("medium", {"priority": "medium"})
+
+    assert [t["id"] for t in store.queue()] == ["urgent-then-calm", "medium"]

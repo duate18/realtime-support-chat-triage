@@ -2,7 +2,7 @@ import pytest
 from fastapi.testclient import TestClient
 from starlette.websockets import WebSocketDisconnect
 
-from app.main import app
+from app.main import MAX_MESSAGE_LENGTH, RATE_LIMIT_MESSAGES, app
 
 LOW_PRIORITY_TEXT = "Parcel still not here, tracking says nothing since last week"  # spedizione, nessuna urgenza
 URGENT_TEXT = "Mi hanno addebitato due volte l'ordine #12345, chiedo il rimborso."  # pagamento doppio
@@ -131,3 +131,75 @@ def test_agent_reply_marks_the_ticket_as_answered(client):
             answered = console.receive_json()
 
     assert find(answered["tickets"], "q-reply")["status"] == "answered"
+
+
+def test_follow_up_does_not_lower_the_priority_of_an_urgent_ticket(client):
+    with client.websocket_connect("/ws-agents") as console:
+        console.receive_json()  # istantanea iniziale
+
+        with client.websocket_connect("/ws/q-followup?role=customer") as customer:
+            customer.send_text(URGENT_TEXT)
+            console.receive_json()
+            customer.send_text("Ciao, c'è qualcuno?")
+            queue = console.receive_json()
+
+    ticket = find(queue["tickets"], "q-followup")
+    assert ticket["triage"]["priority"] != "high"  # il seguito, da solo, non è urgente...
+    assert ticket["priority"] == "high"  # ...ma il ticket resta urgente
+
+
+def test_priority_starts_over_after_the_agent_replies(client):
+    with client.websocket_connect("/ws-agents") as console:
+        console.receive_json()  # istantanea iniziale
+
+        with client.websocket_connect("/ws/q-reset?role=customer") as customer, \
+                client.websocket_connect("/ws/q-reset?role=agent") as agent:
+            customer.send_text(URGENT_TEXT)
+            assert find(console.receive_json()["tickets"], "q-reset")["priority"] == "high"
+
+            agent.send_text("Ci penso io")
+            console.receive_json()
+
+            customer.send_text(LOW_PRIORITY_TEXT)
+            queue = console.receive_json()
+
+    assert find(queue["tickets"], "q-reset")["priority"] == "low"
+
+
+def test_message_that_is_too_long_is_rejected_and_not_saved(client):
+    with client.websocket_connect("/ws/long1?role=customer") as customer:
+        customer.send_text("a" * (MAX_MESSAGE_LENGTH + 1))
+        assert customer.receive_json() == {
+            "type": "error",
+            "detail": f"Message too long (max {MAX_MESSAGE_LENGTH} characters).",
+        }
+
+    assert client.get("/api/tickets/long1").status_code == 404  # nessun ticket creato
+
+
+def test_message_at_the_limit_is_accepted(client):
+    text = "a" * MAX_MESSAGE_LENGTH
+    with client.websocket_connect("/ws/long2?role=agent") as agent:
+        agent.send_text(text)
+        assert agent.receive_json() == {"type": "message", "from": "agent", "text": text}
+
+
+def test_empty_messages_are_ignored(client):
+    with client.websocket_connect("/ws/empty1?role=agent") as agent:
+        agent.send_text("   ")
+        agent.send_text("ok")
+        assert agent.receive_json() == {"type": "message", "from": "agent", "text": "ok"}  # il vuoto non è arrivato
+
+
+def test_too_many_messages_are_rejected(client):
+    # Usiamo il ruolo "agent": non fa partire lo smistamento, quindi il test è veloce.
+    with client.websocket_connect("/ws/rate1?role=agent") as agent:
+        for i in range(RATE_LIMIT_MESSAGES):
+            agent.send_text(f"messaggio {i}")
+            assert agent.receive_json()["type"] == "message"
+
+        agent.send_text("uno di troppo")
+        assert agent.receive_json() == {"type": "error", "detail": "Too many messages, please slow down."}
+
+    history = client.get("/api/tickets/rate1").json()
+    assert len(history["messages"]) == RATE_LIMIT_MESSAGES  # quello rifiutato non è stato salvato

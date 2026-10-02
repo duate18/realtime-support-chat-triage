@@ -7,6 +7,7 @@ from fastapi.concurrency import run_in_threadpool
 from fastapi.responses import FileResponse
 
 from app.classifier import load_model
+from app.limits import RateLimiter
 from app.tickets import TicketStore
 from app.triage import load_faq, triage
 
@@ -14,6 +15,9 @@ app = FastAPI(title="Live Support Demo")
 
 PAGES = Path(__file__).parent / "pages"
 ROLES = {"customer", "agent"}
+MAX_MESSAGE_LENGTH = 1000
+RATE_LIMIT_MESSAGES = 5  # al massimo 5 messaggi...
+RATE_LIMIT_WINDOW = 10.0  # ...ogni 10 secondi, per ogni connessione
 
 
 class RoomManager:
@@ -104,9 +108,18 @@ async def chat(ws: WebSocket, ticket_id: str, role: str = "customer") -> None:
         await ws.close(code=1008)  # 1008 = violazione di policy
         return
     await manager.connect(ticket_id, role, ws)
+    limiter = RateLimiter(RATE_LIMIT_MESSAGES, RATE_LIMIT_WINDOW)
     try:
         while True:
-            text = await ws.receive_text()
+            text = (await ws.receive_text()).strip()
+            if not text:
+                continue  # messaggio vuoto: lo ignoriamo
+            if len(text) > MAX_MESSAGE_LENGTH:
+                await ws.send_json({"type": "error", "detail": f"Message too long (max {MAX_MESSAGE_LENGTH} characters)."})
+                continue
+            if not limiter.allow():
+                await ws.send_json({"type": "error", "detail": "Too many messages, please slow down."})
+                continue
             store.add_message(ticket_id, role, text)  # prima salviamo, così lo storico è già aggiornato
             await manager.broadcast(ticket_id, {"type": "message", "from": role, "text": text})
             if role == "customer":

@@ -1,0 +1,193 @@
+{
+  "dataset": "Banking77 (PolyAI, CC BY 4.0)",
+  "train_size": 10003,
+  "test_size": 3080,
+  "categories": 77,
+  "scikit_learn": "1.9.1",
+  "seed": 42,
+  "baseline": {
+    "accuracy": 0.013,
+    "ci95": [
+      0.0096,
+      0.0176
+    ]
+  },
+  "char_tfidf": {
+    "accuracy": 0.8825,
+    "ci95": [
+      0.8706,
+      0.8934
+    ],
+    "macro_f1": 0.8814
+  },
+  "typos": {
+    "example_original": "How do I locate my card?",
+    "example_noisy": "Hwo do I locte mmy card?",
+    "accuracy": {
+      "char_tfidf": {
+        "clean": 0.8825,
+        "typos_2%": 0.8747,
+        "typos_5%": 0.8516
+      },
+      "word_tfidf": {
+        "clean": 0.8571,
+        "typos_2%": 0.8117,
+        "typos_5%": 0.7334
+      }
+    }
+  },
+  "selective_prediction": [
+    {
+      "threshold": 0.0,
+      "answered": 1.0,
+      "accuracy_on_answered": 0.8825
+    },
+    {
+      "threshold": 0.1,
+      "answered": 0.9692,
+      "accuracy_on_answered": 0.8935
+    },
+    {
+      "threshold": 0.2,
+      "answered": 0.8685,
+      "accuracy_on_answered": 0.9249
+    },
+    {
+      "threshold": 0.3,
+      "answered": 0.7581,
+      "accuracy_on_answered": 0.9516
+    },
+    {
+      "threshold": 0.35,
+      "answered": 0.7104,
+      "accuracy_on_answered": 0.9598
+    },
+    {
+      "threshold": 0.4,
+      "answered": 0.661,
+      "accuracy_on_answered": 0.9676
+    },
+    {
+      "threshold": 0.5,
+      "answered": 0.5448,
+      "accuracy_on_answered": 0.9833
+    },
+    {
+      "threshold": 0.6,
+      "answered": 0.4286,
+      "accuracy_on_answered": 0.9856
+    },
+    {
+      "threshold": 0.7,
+      "answered": 0.314,
+      "accuracy_on_answered": 0.9907
+    },
+    {
+      "threshold": 0.8,
+      "answered": 0.1883,
+      "accuracy_on_answered": 0.9897
+    },
+    {
+      "threshold": 0.9,
+      "answered": 0.0656,
+      "accuracy_on_answered": 0.995
+    }
+  ],
+  "errors_at_app_threshold": {
+    "errors": 362,
+    "caught_by_silence": 274,
+    "answered_wrongly": 88
+  },
+  "calibration": {
+    "ece": 0.3524,
+    "bins": [
+      {
+        "range": "0.0-0.1",
+        "count": 95,
+        "mean_confidence": 0.077,
+        "accuracy": 0.5368
+      },
+      {
+        "range": "0.1-0.2",
+        "count": 310,
+        "mean_confidence": 0.1524,
+        "accuracy": 0.6226
+      },
+      {
+        "range": "0.2-0.3",
+        "count": 340,
+        "mean_confidence": 0.25,
+        "accuracy": 0.7412
+      },
+      {
+        "range": "0.3-0.4",
+        "count": 299,
+        "mean_confidence": 0.3509,
+        "accuracy": 0.8428
+      },
+      {
+        "range": "0.4-0.5",
+        "count": 358,
+        "mean_confidence": 0.4504,
+        "accuracy": 0.8939
+      },
+      {
+        "range": "0.5-0.6",
+        "count": 358,
+        "mean_confidence": 0.5528,
+        "accuracy": 0.9749
+      },
+      {
+        "range": "0.6-0.7",
+        "count": 353,
+        "mean_confidence": 0.6517,
+        "accuracy": 0.9717
+      },
+      {
+        "range": "0.7-0.8",
+        "count": 387,
+        "mean_confidence": 0.7498,
+        "accuracy": 0.9922
+      },
+      {
+        "range": "0.8-0.9",
+        "count": 378,
+        "mean_confidence": 0.8477,
+        "accuracy": 0.9868
+      },
+      {
+        "range": "0.9-1.0",
+        "count": 202,
+        "mean_confidence": 0.9331,
+        "accuracy": 0.995
+      }
+    ]
+  },
+  "top_confusions": [
+    {
+      "true": "virtual_card_not_working",
+      "predicted": "get_disposable_virtual_card",
+      "count": 16
+    },
+    {
+      "true": "why_verify_identity",
+      "predicted": "verify_my_identity",
+      "count": 9
+    },
+    {
+      "true": "pending_top_up",
+      "predicted": "top_up_failed",
+      "count": 5
+    },
+    {
+      "true": "change_pin",
+      "predicted": "get_physical_card",
+      "count": 5
+    },
+    {
+      "true": "virtual_card_not_working",
+      "predicted": "getting_virtual_card",
+      "count": 5
+    }
+  ]
+}
