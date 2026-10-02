@@ -1,6 +1,6 @@
-# Chat di assistenza in tempo reale con assistente di smistamento
+# Chat di assistenza clienti in tempo reale con smistamento automatico dei ticket
 
-![CI](https://github.com/duate18/realtime-support-triage/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/duate18/realtime-support-chat-triage/actions/workflows/ci.yml/badge.svg)
 
 [English](README.md) | Italiano
 

@@ -1,6 +1,6 @@
-# Real-time support chat with a triage assistant
+# Real-time customer support chat with automatic ticket triage
 
-![CI](https://github.com/duate18/realtime-support-triage/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/duate18/realtime-support-chat-triage/actions/workflows/ci.yml/badge.svg)
 
 English | [Italiano](README.it.md)
 
