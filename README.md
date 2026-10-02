@@ -2,6 +2,8 @@
 
 ![CI](https://github.com/duate18/realtime-support-triage/actions/workflows/ci.yml/badge.svg)
 
+English | [Italiano](README.it.md)
+
 A small support-desk demo for a peer-to-peer marketplace: customers chat with an agent in real time, and a lightweight text classifier **triages every incoming message** (category, language, priority) and **suggests a reply to the agent**. When the model is not sure, it says so instead of guessing.
 
 > Independent personal project, built to practice real-time backends and applied ML. It is not affiliated with any company. All data is synthetic and the help-center text is invented.
